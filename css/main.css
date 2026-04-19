@@ -5,11 +5,12 @@
 }
 
 :root {
-    --navBar-color: #131313;
+    --navBar-color: #131313c6;
     --golden-color: #e7c075;
     --golden-hover-color: #bb954f;
     --golden-btn-text-color: #432f01;
     --text-color: #a4a2a8;
+    --small-text-color: #b5aa9b;
 }
 
 body {
