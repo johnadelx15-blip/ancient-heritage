@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        @font-face {
+            font-family: main-font;
+            src: url(../assets/Fonts/noto-serif.regular.ttf);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -20,26 +25,17 @@
             margin: 0;
             padding: 0;
             overflow: auto;
+            user-select: none;
         }
 
         #iframe-container {
             transform-origin: left top;
-            transition: 0.4s;       
+            transition: 0.4s;
         }
-        
+
         #map {
             position: absolute;
             width: 100%;
-        }
-
-        #pyramids {
-            position: absolute;
-            display: flex;
-            width: 7%;
-            filter: drop-shadow(0 0 10px #e7c075);
-            cursor: pointer;
-            margin-left: 45%;
-            margin-top: 18%;
         }
 
         #zoom-in {
@@ -50,8 +46,17 @@
             font-size: 5vw;
             color: #4e3700;
             cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        #zoom-in:hover {
+            transform: scale(0.94)
         }
 
+        #zoom-in:active {
+            background-color: #b39254;
+        }
+        
         #zoom-out {
             background-color: #c5a059;
             padding: 0 2.1vw;
@@ -60,6 +65,15 @@
             font-size: 5vw;
             color: #4e3700;
             cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        #zoom-out:hover {
+            transform: scale(0.94)
+        }
+        
+        #zoom-out:active {
+            background-color: #b39254;
         }
 
         #zoom-btn {
@@ -70,14 +84,179 @@
             margin-left: 2%;
             margin-top: 55%;
         }
+
+        #pyramid {
+            position: absolute;
+            display: flex;
+            width: 7%;
+            filter: drop-shadow(0 0 10px #e7c075);
+            cursor: pointer;
+            margin-left: 49%;
+            margin-top: 16%;
+        }
+
+        #siwa {
+            position: absolute;
+            display: flex;
+            width: 4.5%;
+            filter: drop-shadow(0 0 10px #e7c075);
+            cursor: pointer;
+            margin-top: 18%;
+            margin-left: 7%;
+        }
+
+        #siwa-p {
+            position: absolute;
+            color: #e7c075;
+            text-shadow: 0 0 10px #e7c075;
+            margin-top: 21%;
+            margin-left: 11%;
+            font-family: main-font;
+            font-size: 14px;
+        }
+
+        #bahariya {
+            position: absolute;
+            display: flex;
+            width: 4.5%;
+            filter: drop-shadow(0 0 10px #e7c075);
+            cursor: pointer;
+            margin-top: 25%;
+            margin-left: 30%;
+        }
+
+        #bahariya-p {
+            position: absolute;
+            color: #e7c075;
+            text-shadow: 0 0 10px #e7c075;
+            margin-top: 28%;
+            margin-left: 34%;
+            font-family: main-font;
+            font-size: 14px;
+        }
+
+        #farafra {
+            position: absolute;
+            display: flex;
+            width: 4.5%;
+            filter: drop-shadow(0 0 10px #e7c075);
+            cursor: pointer;
+            margin-top: 33%;
+            margin-left: 24%;
+        }
+
+        #farafra-p {
+            position: absolute;
+            color: #e7c075;
+            text-shadow: 0 0 10px #e7c075;
+            margin-top: 36%;
+            margin-left: 18%;
+            font-family: main-font;
+            font-size: 14px;
+        }
+
+        #dakhla {
+            position: absolute;
+            display: flex;
+            width: 4.5%;
+            filter: drop-shadow(0 0 10px #e7c075);
+            cursor: pointer;
+            margin-top: 41%;
+            margin-left: 37%;
+        }
+
+        #dakhla-p {
+            position: absolute;
+            color: #e7c075;
+            text-shadow: 0 0 10px #e7c075;
+            margin-top: 44%;
+            margin-left: 31%;
+            font-family: main-font;
+            font-size: 14px;
+        }
+
+        #kharga {
+            position: absolute;
+            display: flex;
+            width: 4.5%;
+            filter: drop-shadow(0 0 10px #e7c075);
+            cursor: pointer;
+            margin-top: 41%;
+            margin-left: 46%;
+        }
+
+        #kharga-p {
+            position: absolute;
+            color: #e7c075;
+            text-shadow: 0 0 10px #e7c075;
+            margin-top: 44%;
+            margin-left: 50%;
+            font-family: main-font;
+            font-size: 14px;
+        }
+
+        #abu-simbel {
+            position: absolute;
+            display: flex;
+            width: 5%;
+            filter: drop-shadow(0 0 10px #b39254);
+            cursor: pointer;
+            margin-top: 59%;
+            margin-left: 58%;
+        }
+
+        #abu-simbel-p {
+            position: absolute;
+            color: #e7c075;
+            text-shadow: 0 0 10px #e7c075;
+            margin-top: 64%;
+            margin-left: 56%;
+            font-family: main-font;
+            font-size: 14px;
+        }
+
+        #karnak {
+            position: absolute;
+            display: flex;
+            width: 4%;
+            filter: drop-shadow(0 0 10px #b39254);
+            cursor: pointer;
+            margin-top: 42%;
+            margin-left: 65%;
+        }
+
+        #karnak-p {
+            position: absolute;
+            color: #e7c075;
+            text-shadow: 0 0 10px #e7c075;
+            margin-top: 46%;
+            margin-left: 63%;
+            font-family: main-font;
+            font-size: 14px;
+        }
     </style>
 </head>
 
 <body>
     <div id="iframe-container">
-        <img src="../assets/images/Map-imgs/dark-map.jpg" id="map">
+        <img src="../assets/images/Map-imgs/dark-map.jpg" id="map" draggable="false">
         <div id="icons-container">
-            <img src="../assets/images/Map-imgs/pyramids.png" id="pyramids" onclick="info()">
+            <img src="../assets/images/Map-imgs/pyramids.png" id="pyramid" onclick="selected(this.id)"
+                draggable="false">
+            <img src="../assets/images/Map-imgs/Trees.png" id="siwa" onclick="selected(this.id)" draggable="false">
+            <p id="siwa-p">Siwa</p>
+            <img src="../assets/images/Map-imgs/Trees.png" id="bahariya" onclick="selected(this.id)" draggable="false">
+            <p id="bahariya-p">Bahariya</p>
+            <img src="../assets/images/Map-imgs/Trees.png" id="farafra" onclick="selected(this.id)" draggable="false">
+            <p id="farafra-p">Farafra</p>
+            <img src="../assets/images/Map-imgs/Trees.png" id="dakhla" onclick="selected(this.id)" draggable="false">
+            <p id="dakhla-p">Dakhla</p>
+            <img src="../assets/images/Map-imgs/Trees.png" id="kharga" onclick="selected(this.id)" draggable="false">
+            <p id="kharga-p">Kharga</p>
+            <img src="../assets/images/Map-imgs/big-temple.png" id="abu-simbel" onclick="selected(this.id)" draggable="false">
+            <p id="abu-simbel-p">Abu Simbel</p>
+            <img src="../assets/images/Map-imgs/small-temple.png" id="karnak" onclick="selected(this.id)" draggable="false">
+            <p id="karnak-p">El Karnak</p>
         </div>
     </div>
     <div id="zoom-btn">
