@@ -123,3 +123,8 @@ h6 {
     flex-direction: column;
     gap: 12px;
 }
+
+.image-container{
+    height: 160px;
+}
+
