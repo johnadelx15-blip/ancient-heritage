@@ -242,10 +242,10 @@ header {
 
 .videoDiv {
     /* background-color: green; */
-    width: 40%;
-    height: 80%;
+    width: 45%;
+    height: 85%;
     border-radius: 30px;
-    margin-right: 30px;
+    margin-right: 50px;
 }
 
 .videoDiv video {
@@ -260,6 +260,7 @@ header {
     /* background-color: blue; */
     width: 50%;
     height: 80%;
+    /* margin-left: 30px; */
 }
 
 .videoDescribtionHeader {
@@ -467,7 +468,7 @@ header {
 } */
 
 .To_Be_Continued {
-    background-color: red;
+    /* background-color: red; */
     display: block;
     height: 140px;
     width: 100%;
