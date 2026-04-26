@@ -121,11 +121,11 @@ body {
 }
 
 .card-container:nth-child(4) {
-    grid-column: 4 / 7; /* عكس الأول (يمين) */
+    grid-column: 5 / 7; /* عكس الأول (يمين) */
 }
 
 .card-container:nth-child(5) {
-    grid-column: 1 / 4; /* عكس التاني (شمال) */
+    grid-column: 1 / 5; /* عكس التاني (شمال) */
 }
 
 video {
