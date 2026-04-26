@@ -51,7 +51,7 @@ let products = {
             category: "Coptic Musuem",
             image: "../assets/images/coptic museum/القبطي-20.jpg",
             header: "Textile"
-        }, { 
+        }, {
             id: 9,
             artifactName: "Statue of Osiris",
             category: "Egyptian Museum",
@@ -159,7 +159,7 @@ let products = {
             category: "Egyptian Museum",
             image: "../assets/images/egy museum/Yuya-and-Thuya-papyrus-emc-1024x851.jpg",
             header: "papyrus"
-        },{ 
+        }, {
             id: 27,
             artifactName: "Statue of Senwosert I",
             category: "Grand Egyptian Museum",
@@ -243,139 +243,139 @@ let products = {
             category: "Islamic Art Museum",
             image: "../assets/images/islamic art/Upload_Product_Entity_Db_Product_MainImage_41acd447f199715a054f3dcee4cfbcca.jpg",
             header: "Ivory"
-        },{
+        }, {
             id: 41,
             artifactName: "balcony",
             category: "Islamic Art Museum",
             image: "../assets/images/islamic art/Upload_Product_Entity_Db_Product_MainImage_57fce086ce9de4941a19069077fccdac.jpg",
             header: "wood"
-        },{
+        }, {
             id: 42,
             artifactName: "hilya",
             category: "Islamic Art Museum",
             image: "../assets/images/islamic art/Upload_Product_Entity_Db_Product_MainImage_5b3e6e86c4fa053c1a0a4919edc2c2aa.jpg",
             header: "paper"
-        },{
+        }, {
             id: 43,
             artifactName: "dinar",
             category: "Islamic Art Museum",
             image: "../assets/images/islamic art/Upload_Product_Entity_Db_Product_MainImage_600554ca970ab847202d3172b74cc327.jpg",
             header: "gold"
-        },{
+        }, {
             id: 44,
             artifactName: "helmet",
             category: "Islamic Art Museum",
             image: "../assets/images/islamic art/Upload_Product_Entity_Db_Product_MainImage_65ec5cec3ab63bba7d07da6161a565af.jpg",
             header: "steel"
-        },{
+        }, {
             id: 45,
             artifactName: "gold ring",
             category: "Islamic Art Museum",
             image: "../assets/images/islamic art/Upload_Product_Entity_Db_Product_MainImage_6a807e29fdfc1646e998a5741898ae51.jpg",
             header: "gold"
-        },{
+        }, {
             id: 46,
             artifactName: "shard",
             category: "Islamic Art Museum",
             image: "../assets/images/islamic art/Upload_Product_Entity_Db_Product_MainImage_7044d4e92c9a6e235647fed73dfd155e.jpg",
             header: "fritware"
-        },{
+        }, {
             id: 47,
             artifactName: "Table",
             category: "Islamic Art Museum",
             image: "../assets/images/islamic art/Upload_Product_Entity_Db_Product_MainImage_7fc45dba83f250dac475499b89f9f27c.jpg",
             header: "Copper Alloy"
-        },{
+        }, {
             id: 48,
             artifactName: "goblet",
             category: "Islamic Art Museum",
             image: "../assets/images/islamic art/Upload_Product_Entity_Db_Product_MainImage_8560b6eb144825f05bc04482093d1821.jpg",
             header: "glass"
-        },{
+        }, {
             id: 49,
             artifactName: "lantern",
             category: "Islamic Art Museum",
             image: "../assets/images/islamic art/Upload_Product_Entity_Db_Product_MainImage_ac7381aa9dde8629b170bdc15c3b8dba.jpg",
             header: "copper alloy"
-        },{
+        }, {
             id: 50,
             artifactName: "mosque lamp",
             category: "Islamic Art Museum",
             image: "../assets/images/islamic art/Upload_Product_Entity_Db_Product_MainImage_c9cd95d54c203d9c81be15f61b22b6cc.jpg",
             header: "glass"
-        },{
+        }, {
             id: 51,
             artifactName: "tile",
             category: "Islamic Art Museum",
             image: "../assets/images/islamic art/Upload_Product_Entity_Db_Product_MainImage_d8d07ad22dcc16674a79946bed8f571d.jpg",
             header: "fritware"
-        },{
+        }, {
             id: 52,
             artifactName: "Tombstone",
             category: "Islamic Art Museum",
             image: "../assets/images/islamic art/Upload_Product_Entity_Db_Product_MainImage_da53da1f3dae66f0e20fafeda452798f.jpg",
             header: "limestone"
-        },{
+        }, {
             id: 53,
             artifactName: "Kiswah",
             category: "Islamic Art Museum",
             image: "../assets/images/islamic art/Upload_Product_Entity_Db_Product_MainImage_de3c0cf916d4034c3da772dc724c5660.jpg",
             header: "textile"
-        },{
+        }, {
             id: 54,
             artifactName: "carpet",
             category: "Islamic Art Museum",
             image: "../assets/images/islamic art/Upload_Product_Entity_Db_Product_MainImage_fd64eb232edf3d85acafb8d2811a8c93.jpg",
             header: "TEXTILE"
-        },{
+        }, {
             id: 55,
             artifactName: "The coffin of Sennedjem",
             category: "NMEC",
             image: "../assets/images/nmec/2023-02-03-05.24-scaled.jpg",
             header: "wood"
-        },{
+        }, {
             id: 56,
             artifactName: "Queen Ahmose Nefertari coffin",
             category: "NMEC",
             image: "../assets/images/nmec/Ahmus-nerftari-2048x1678.jpg",
             header: "wood"
-        },{
+        }, {
             id: 57,
             artifactName: "Al Falaha",
             category: "NMEC",
             image: "../assets/images/nmec/Al-Falaha-scaled.jpg",
             header: "white marble"
-        },{
+        }, {
             id: 58,
             artifactName: "Kaaba Kiswa",
             category: "NMEC",
             image: "../assets/images/nmec/Bab-Al-Tawba-scaled.jpg",
             header: "textile"
-        },{
+        }, {
             id: 59,
             artifactName: "Bawit Virgin",
             category: "NMEC",
             image: "../assets/images/nmec/Dome-2048x1459.jpg",
             header: "limestone"
-        },{
+        }, {
             id: 60,
             artifactName: "Ekhnaton Statue",
             category: "NMEC",
             image: "../assets/images/nmec/image00004.jpg",
             header: "sandstone"
-        },{
+        }, {
             id: 61,
             artifactName: "uniforms",
             category: "NMEC",
             image: "../assets/images/nmec/image00008.jpg",
             header: "textile"
-        },{
+        }, {
             id: 62,
             artifactName: "coffin of King Thutmose",
             category: "NMEC",
             image: "../assets/images/nmec/image00015.jpg",
             header: "wood"
-        },{
+        }, {
             id: 63,
             artifactName: "Mahmal King Farouk",
             category: "NMEC",
@@ -385,6 +385,32 @@ let products = {
     ]
 }
 
+//هنشوف الايكون في اللوكال ستورج ولا لا
+function isItemInStorage(key, id) {
+    let savedItems = JSON.parse(localStorage.getItem(key)) || []; //لو فاضي هيبقا ليست فاضية
+    return savedItems.some(item => item.id === id); //Search for the first element that has the same id
+    //
+}
+
+function addToLocal(key, value) {
+    let savedItems = JSON.parse(localStorage.getItem(key)) || []//لو فاضي هيبقا ليست فاضية
+    let isExist = false // flag
+
+    for (let i = 0; i < savedItems.length; i++) {
+        if (savedItems[i].id === value.id) {
+            isExist = true; // لو لقيناه بنغير الحالة
+            break; // بنوقف اللوب فورا مش محتاجين نكمل
+        }
+    }
+    if (isExist)
+        return
+
+    savedItems.push(value) //نضيف العنصر للاراي اللي في اللوكال
+    localStorage.setItem(key, JSON.stringify(savedItems))//نضيف الاراي للوكال
+}
+
+
+
 //هنعمل العناصر باستخدام الجافا 
 for (let i of products.data) {//لوب عادية
     //=> "i" is our counter ---- i.category == the ith value of "category" key in our dictionary(object)   
@@ -392,7 +418,7 @@ for (let i of products.data) {//لوب عادية
     let card = document.createElement("div")
     let x = i.category.replaceAll(" ", "-")//علشان الكاتيجوري اللي في الأوبجيكت فيها مسافات ولو في مسافات بيعتبر الكلمتين اتنين كلاس مختلفين مش كلاس واحد
     card.classList.add("card", x, "hide") //adding these classes to each card
-    
+
     //الديف اللي هيشيل الصورة
     let imgContainer = document.createElement("div")
     imgContainer.classList.add("image-container")//كلاس عادي له
@@ -410,7 +436,7 @@ for (let i of products.data) {//لوب عادية
     header.innerText = i.header.toUpperCase()
     textContainer.appendChild(header)
 
-    
+
 
     let name = document.createElement("h2")
     name.classList.add("artifact-name")
@@ -424,16 +450,30 @@ for (let i of products.data) {//لوب عادية
     museum.classList.add("artifacte-subtitle")
     museum.innerText = i.category.toUpperCase()
     cardFooter.appendChild(museum)
-    
+
     let iconBox = document.createElement("div")
     iconBox.classList.add("icon-box")
 
     let archiveIcon = document.createElement("i")
     archiveIcon.classList.add("fa-solid", "fa-box-archive", "archive-icon")//icon from FontAwsome.com
+    if (isItemInStorage("archive", i.id)) {//لو الاي دي جوا الليست في اللوكال هتحليها لونها احمر
+        archiveIcon.classList.add("active-icon")
+    }
+    archiveIcon.onclick = () => {
+        addToLocal("archive", i)//الفانكشن الي هتضيف الكارت كله في اللوكال
+        archiveIcon.classList.add("active-icon")
+    }
     iconBox.appendChild(archiveIcon)
 
     let HeartIcon = document.createElement("i")
-    HeartIcon.classList.add("fa-solid" ,"fa-heart" ,"heart-icon")
+    HeartIcon.classList.add("fa-solid", "fa-heart", "heart-icon")
+    if (isItemInStorage("favorite", i.id)) {
+        HeartIcon.classList.add("active-icon")
+    }
+    HeartIcon.onclick = () => {
+        addToLocal("favorite", i)
+        HeartIcon.classList.add("active-icon")
+    }
     iconBox.appendChild(HeartIcon)
 
     cardFooter.appendChild(iconBox)
@@ -444,9 +484,9 @@ for (let i of products.data) {//لوب عادية
     document.getElementById("artifacts-container").appendChild(card)
 }
 
-
+//filter function
 function filterArtifacts(value) {//onclick in html file
-    let buttons = document.querySelectorAll(".button-value")
+    let buttons = document.querySelectorAll(".button-value") //ليست فيها كل البوتونز
     buttons.forEach(button => {//changing color of choosing category
         if (value.toUpperCase() == button.innerText.toUpperCase()) {
             button.classList.add("active-category")
@@ -455,6 +495,7 @@ function filterArtifacts(value) {//onclick in html file
             button.classList.remove("active-category")
         }
     })
+
 
     let elements = document.querySelectorAll(".card")
     elements.forEach(e => {
@@ -488,3 +529,4 @@ document.getElementById("search").addEventListener("click", () => {
     })
 
 })
+

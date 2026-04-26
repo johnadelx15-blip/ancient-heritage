@@ -12,7 +12,8 @@
     border: none;
     width: 54vw;
     border-radius: 15px;
-    height: 84vh;
+    height: 100%;
+
 }
 
 #map-main {
@@ -25,6 +26,7 @@
     margin-top: 10px;
     margin-bottom: 3%;
     transition: 0.5s;
+    height: 83.5vh;
 }
 
 #information-container {
@@ -57,7 +59,7 @@
     padding-top: 10px;
 }
 
-#pyr-img {
+#img {
     width: 350px;
     filter: brightness(0.7);
     margin-top: 20px;
@@ -68,13 +70,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     color: #ddb870;
-    width: 350px;
+    width: 100%;
     font-family: main-font;
     font-size: 18px;
+    padding: 0;
+    text-align: center;
 }
 
 #selected-info p {
-    padding: 0px 25px;
     padding-top: 20px;
 }
 

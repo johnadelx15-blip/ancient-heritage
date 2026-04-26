@@ -1,0 +1,43 @@
+.background{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    align-items: flex-start;
+    text-align: left;
+    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),
+    url(../assets/images/Screenshot\ \(645\).png);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; 
+    padding-top:75px ;
+}
+h1,h3{
+    color: var(--golden-color);
+    font-family: mainFont;
+    font-weight: normal;
+}
+h1{
+   font-size: 30px;
+}
+h3{
+    font-size: 20px;
+    padding: 10px 0;
+}
+p ,li{
+    
+    color: var(--small-text-color);
+    font-family: mainFont;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+li{
+    font-size: 12px;
+}
+p{
+    padding-left: 20px;
+    font-size: 16px;
+}
+.list-terms{
+    padding-left: 50px;
+
+}

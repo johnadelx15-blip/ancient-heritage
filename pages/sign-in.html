@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ancient Heritage|Sign In</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/sign-in.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- !!ملف تنسيق الناف بار والفوتر مهم -->
+
 
 </head>
 
@@ -25,16 +28,71 @@
             </div>
         </div>
         <div class="sign">
-            <a class="sign-btn" href="sign-up.html">Sign up</a>
+            <a class="sign-btn" id="sign-btn" href="sign-up.html">Sign up</a>
         </div>
     </nav>
     <main>
+        <div class="a">
+            <section class="right">
+                <p class="miniTitle">PRESERVING CIVILIZATION</p>
+                <h1> <span> Enter the </span> <br> Sanctum of Ages</h1>
+                <div class="line"></div>
+                <p class="description">Access the world's most exclusive digital reliquary.<br>
+                    Secure your identity to unlock provenance records,<br>
+                    high-fidelity artifact scans, and scholarly research.</p>
+                <div class="end">
+                    <div>
+                        <h4>12.5k</h4>
+                        <p>ARTIFACTS DIGITIZED</p>
+                    </div>
+                    <div>
+                        <h4>85</h4>
+                        <p>PARTICIPATING MUSEUMS</p>
+                    </div>
+                </div>
+            </section>
+            <section class="left">
+                <form class="sign-in" name="signIn" method="post" onsubmit="dataForm(event)">
+                    <h6 class="success"></h6>
+                    <div class="form-link">
+                        <a href="sign-in.html" class="active">SIGN IN</a>
+                        <a href="sign-up.html">REGISTER</a>
+                    </div>
+                    <div>
+                        <label>EMAIL</label>
+                        <input type="text" name="Email" placeholder="ancientheritage@gmail.com" onfocus="clearM(0)">
+                        <h6 class="error"></h6>
+                        <!-- <h6 class="success"></h6> -->
+                    </div>
+                    <div>
+                        <label>PASSWORD</label>
+                        <input type="password" name="Password" placeholder="••••••••" onfocus="clearM(1)">
+                        <h6 class="error"></h6>
+                        <!-- <h6 class="success"></h6> -->
+                    </div>
+                    <p class="or">OR</p>
+                    <div class="diff-way">
+                        <a href="https://www.facebook.com" target="_blank"><i
+                                class="fa-brands fa-facebook icon"></i></a>
+                        <a href="https://www.google.com" target="_blank"><i class="fa-brands fa-google icon"></i></a>
+                        <a href="https://www.microsoft.com/en-eg" target="_blank"><i
+                                class="fa-brands fa-microsoft icon"></i></a>
+                    </div>
+                    <button type="submit" value="Access">AUTHORIZE ACCESS</button>
+                    <p class="Q">Don't have an account? <a href="sign-up.html">Register</a></p>
+                    <p class="Q">By continuing, you agree to our<a target="_blank" href="terms.html"> Terms of Use</a>
+                        and<a target="_blank" href="privacy.html"> Privacy & Ethics Policy</a> .</p>
+                </form>
+            </section>
+        </div>
     </main>
     <footer class="footer">
         <div class="copy-right">
             <h5>
                 ANCIENT HERITAGE
             </h5>
+        </div>
+        <div class="copy-right-2">
             <p>
                 © 2026 CAPITAL UNIVERSITY. All Rights Reserved.
             </p>
@@ -45,8 +103,9 @@
             <a href="about.html">About Us</a>
         </div>
     </footer>
-    <script src="../js/main.js"></script>
 
+    <script src="../js/main.js"></script>
+    <script src="../js/sign-in.js"></script>
 </body>
 
 </html>

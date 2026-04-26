@@ -5,6 +5,7 @@
     --golden-btn-text-color: #432f01;
     --text-color: #a4a2a8;
     --small-text-color: #b5aa9b;
+    --card-background-color:#353534;
 }
 
 main {
@@ -25,7 +26,7 @@ main {
 
 .search-window input {
     height: 42px;
-    background-color: #353534;
+    background-color: var(--card-background-color);
     border: none;
     width: 60%;
     font-size: 16px;
@@ -75,26 +76,29 @@ main {
 #artifacts-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     padding: 2em 0;
     margin: 0 16%;
-    gap: 50px 0;
+    gap: 50px 105px;
 }
 
 .card {
-    background-color: #353534;
-    max-width: 18em;
-    padding: 10px;
+    position: relative;
+    background-color: var(--card-background-color);
+    max-width: 19em;
+    padding: 8px;
+    height: 390px;
     border-radius: 5px;
-    img{
+    /* img{
         display: flex;
         justify-self: center;
-    }
+    } */
 }
 
-.imgage-container {
+.image-container {
     text-align: center;
+    max-width: 240px;
 }
 
 img {
@@ -112,23 +116,38 @@ img {
 .artifact-name{
     color: var(--text-color);
     margin-top: 5px;
+    font-size: 20px;
+    width: 240px;
 }
 .artifacte-subtitle{
     color: var(--small-text-color);
     margin-top: 10px;
+    width: 240px;
 }
 
 .card-footer{
+    position: absolute;
+    bottom: 20px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    width: 240px;
+    justify-self: flex-end;
+}
+.icon-box{
+    width: 40%;
+    display: flex;
+    align-items: flex-end;
+    gap: 0 5px;
 }
 .heart-icon{
     margin-left:10px ;
+    
 }
-.active-heart{
-    color: red;
-}
+
 .heart-icon,.archive-icon{
     color: var(--golden-color);
     cursor: pointer;
+}
+.active-icon{
+    color: red !important;
 }

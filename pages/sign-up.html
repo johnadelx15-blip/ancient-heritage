@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ancient Heritage|Register</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/sign-up.css">
     <!-- !!ملف تنسيق الناف بار والفوتر مهم -->
+
 
 </head>
 
@@ -29,12 +31,83 @@
         </div>
     </nav>
     <main>
+        <div class="a">
+            <section class="right">
+                <p class="miniTitle">PRESERVING CIVILIZATION</p>
+                <h1> <span> Enter the </span> <br> Sanctum of Ages</h1>
+                <div class="line"></div>
+                <p class="description">Access the world's most exclusive digital reliquary.<br>
+                    Secure your identity to unlock provenance records,<br>
+                    high-fidelity artifact scans, and scholarly research.</p>
+                <div class="end">
+                    <div>
+                        <h4>12.5k</h4>
+                        <p>ARTIFACTS DIGITIZED</p>
+                    </div>
+                    <div>
+                        <h4>85</h4>
+                        <p>PARTICIPATING MUSEUMS</p>
+                    </div>
+                </div>
+            </section>
+            <section class="left">
+                <form name="signUp" class="sign-up" method="post" onsubmit="dataForm(event)">
+                    <!-- <h6 class="success"></h6> -->
+                    <div class="form-link">
+                        <a href="sign-in.html">SIGN IN</a>
+                        <a href="sign-up.html" class="active">REGISTER</a>
+                    </div>
+                    <div>
+                        <label>Name *</label>
+                        <input name="Name" type="text" placeholder="Rahma Mohamed" onfocus="clearM(0)">
+                        <h6 class="error"></h6>
+                        <!-- <h6 class="success"></h6> -->
+                    </div>
+                    <div>
+                        <label>EMAIL *</label>
+                        <input name="Email" type="text" placeholder="ancientheritage@gmail.com" onfocus="clearM(1)">
+                        <h6 class="error"></h6>
+                        <!-- <h6 class="success"></h6> -->
+                    </div>
+                    <div>
+                        <label>NATIONALITY</label>
+                        <select class="nationality" name="nationality">
+                            <option value="">Select your nationality</option>
+                            <option value="egyptian">Egyptian</option>
+                            <option value="american">American</option>
+                            <option value="british">British</option>
+                            <option value="saudi">Saudi</option>
+                            <option value="french">French</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>PASSWORD *</label>
+                        <input name="Password" type="password" placeholder="••••••••" onfocus="clearM(2)">
+                        <h6 class="error"></h6>
+                        <!-- <h6 class="success"></h6> -->
+                    </div>
+                    <div>
+                        <label>CONFIRM PASSWORD *</label>
+                        <input name="confirmPassword" type="password" placeholder="••••••••" onfocus="clearM(3)">
+                        <h6 class="error"></h6>
+                        <!-- <h6 class="success"></h6> -->
+                    </div>
+                    <button type="submit">AUTHORIZE RECISITRATION</button>
+                    <p class="Q">Already have an account? <a href="sign-in.html">Sign in</a></p>
+                    <p class="Q">By continuing, you agree to our<a target="_blank" href="terms.html"> Terms of Use</a>
+                        and<a target="_blank" href="privacy.html"> Privacy & Ethics Policy</a> .</p>
+                </form>
+            </section>
+        </div>
     </main>
     <footer class="footer">
         <div class="copy-right">
             <h5>
                 ANCIENT HERITAGE
             </h5>
+        </div>
+        <div class="copy-right-2">
             <p>
                 © 2026 CAPITAL UNIVERSITY. All Rights Reserved.
             </p>
@@ -46,6 +119,7 @@
         </div>
     </footer>
     <script src="../js/main.js"></script>
+    <script src="../js/sign-up.js"></script>
 </body>
 
 </html>

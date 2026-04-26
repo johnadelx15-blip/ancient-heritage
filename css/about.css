@@ -1,0 +1,200 @@
+.shadow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:radial-gradient(circle,transparent 30%, rgba(0,0,0,0.8))100%;
+    pointer-events: none;
+    z-index: 1;
+}
+.team-cards , .header, .join-us{
+    position: relative;
+    z-index: 10; /* عشان يظهر فوق الـ shadow */
+    padding: 40px 60px;
+    font-family: mainFont;
+}
+.subtitle{
+    color: var(--golden-color);
+    letter-spacing: 4px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.header-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap:30px;
+}
+.header h1{
+    color: #fff;
+    font-size: 60px;
+    line-height: 1.1;
+    font-weight: normal;
+}
+.header h1 span{
+    color: var(--golden-color);
+    font-style:italic; 
+}
+.description{
+    max-width: 400px;
+    color: var(--text-color);
+    font-size: 18px;
+    line-height: 1.6;
+}
+.team-grid{
+    max-width: 100%;/*اختياري: لضبط العرض الأقصى*/
+    width: 100%;
+    padding: 60px 40px;/*الهوامش المحيطة بالشبكة*/
+    box-sizing: border-box;
+    display: grid !important;/*إجبار النظام على استخدام الجريد*/
+    grid-template-columns: repeat(4,1fr);/*بنقول للمتصفح اعمل 4 أعمدة، وكل عمود ياخد مساحة متساوية*/
+    gap: 20px;/*المسافة بين الصور*/
+   /* margin: 0 auto;*/
+}
+.team-cards{
+    width: 100% !important;/*خليه يملأ العمود المخصص له فقط*/
+    display: flex;
+    /*box-sizing: border-box;/*بيضمن ان ال padding ميزودش حجم الصورة*/
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;/*أي حاجة تخرج بره حدود الكارت (زي صورة كبيرة) تختفي*/
+    margin-bottom: 40px;
+}
+.image-card{
+    transition: 0.5s ease;
+    border: 1px solid rgba(197, 163, 104, 0.2);
+    width: 100%;/*الحاوية تاخد عرض الكارت*/
+    height: 300px;
+    position: relative;
+    aspect-ratio: 3/4;/*تثبيت الطول بالنسبة للعرض عشان الصور كلها تبقي مقاس واحد*/
+    overflow: hidden;/* اي زيادة في الصورة يتم قصها*/
+    background-color: #000;/* placeholder color for images */
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);/* subtle border for better visibility on dark background */
+}
+.image-card img{
+    width: 100% !important;/* ensure the image fills the card */
+    height: 100% !important;
+    object-fit: cover !important;/*بتملا المكان بدون ما تمط الصورة*/
+    opacity: 0.7;
+    display: block;
+    transition: 0.6s cubic-bezier(0.4,0,0.2,1);
+    filter: grayscale(100%) sepia(20%) contrast(1.2);/* تأثير اثري : ابيض  و اسود + تباين عالي */
+}
+.team-cards:hover img{
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.team-cards h3{
+    color:#fff;
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+.team-cards .work{
+    color: var(--small-text-color);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.team-link{
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--golden-color);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.team-link:hover{
+    color: var(--golden-hover-color);
+    letter-spacing: 1px;
+}
+/* join us part*/
+.join-us{
+    padding: 120px 5%;
+    position: relative;
+    z-index: 10;
+    font-family: 'Georgia',serif;
+    text-align: center;
+    margin: 80px 0;
+}
+.box{
+    max-width: 900px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 80px 0;
+}
+.box .subtitle{
+    color: var(--golden-color);
+    letter-spacing: 4px;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+.box h2{
+    color: #fff;
+    font-size: 45px;
+    font-style: italic;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+.description-text {
+    color: var(--text-color); /* لون النص الهادئ */
+    font-size: 19px;
+    line-height: 1.8;
+    max-width: 700px; /* تضييق عرض النص حتى ينزل لسطر جديد بشكل جمالي */
+    margin: 0 auto 50px; /* توسيط النص وإضافة مسافة من الأسفل للزر */
+}
+
+.highlight {
+    color: var(--golden-color); /* تلوين الكلمات المفتاحية باللون الذهبي */
+    font-weight: bold;
+}
+.join-btn{
+    background-color: transparent; /* خلفية شفافة */
+    border: 1px none var(--golden-color); /* إطار ذهبي رفيع */
+    color: var(--golden-color); /* لون النص ذهبي */
+    padding: 16px 40px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: mainFont; /* استخدام الخط الأساسي للزر */
+    transition: all 0.4s ease;
+}
+.join-btn:hover{
+    background-color: var(--golden-color); /* الخلفية تصبح ذهبية بالكامل عند الهوفر */
+    color: #000000; /* لون النص يصبح أسود (لون الـ Background الأصلي) */
+    box-shadow: 0 0 15px rgba(231, 192, 117, 0.3); /* توهج خفيف */
+}
+/*Responsive*/
+/*التابلت: صورتين في السطر*/
+@media (max-width: 1024px) {
+    .team-grid{
+       grid-template-columns: repeat(2,1fr);
+    }
+}
+/*الموبايل: صورة واحدة في السطر*/
+@media (max-width: 600px) {
+    .team-grid{
+       grid-template-columns: 1fr;
+       padding: 40px 20px;/*تقليل الهوامش قليلاً*/
+    }
+    .header h1{
+        font-size: 40px;
+    }
+}
+@media (max-width: 768px) {
+    .box h2 { font-size: 32px; }
+    .description-text { font-size: 17px; }
+    .join-us { padding: 80px 5%; }
+}
+
+
+    

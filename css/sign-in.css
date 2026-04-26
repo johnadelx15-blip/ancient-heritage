@@ -1,0 +1,218 @@
+.a{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-image:linear-gradient(rgba(0,0,0,0.5)),
+    url(../assets/images/Screenshot\ \(645\).png);
+    background-size: cover;
+    height: 100vh; 
+    padding-top:75px ;
+    position: static;
+}
+
+.miniTitle{
+    color: var(--golden-color);
+    font-size: 14px;
+    font-family: mainFont;
+    letter-spacing: 2px;
+    margin-bottom: -10px;
+}
+h1 span{
+    color: white;
+}
+h1{
+    color: var(--golden-color);
+    font-size: 70px;
+    font-family: mainFont ;
+    font-weight: 500;
+    padding: 20px 0;
+}
+.line{
+    width: 20%;
+     border-top:5px solid var(--golden-color) ;
+}
+.description{
+    color: var(--small-text-color);
+    font-size: 22px;
+    font-family: mainFont ;
+    padding:20px 0;
+    line-height: 1.4;
+}
+.end{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-top: 30px;
+}
+.end h4{
+    font-size: 40px;
+    font-family: mainFont;
+    color: var(--golden-color);
+    font-weight: normal;
+}
+.end p{
+    color: var(--small-text-color);
+    font-size: 14px;
+    font-family: mainFont;
+    letter-spacing: 2px;
+}
+.left{
+    display: flex;
+    justify-content: center;
+    background-color: var(--navBar-color);
+    padding:50px;
+    width: 40%;
+}
+.sign-in{
+    display: flex;
+    flex-direction: column;
+    /* gap: 25px; */
+    width: 100%;
+}
+.form-link{
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+    margin-bottom: 25px;
+}
+.form-link a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 16px;
+    font-family: mainFont;
+    letter-spacing: 2px;
+    padding: 3px;
+}
+.form-link a:hover {
+    color: var(--golden-color);
+}
+.form-link a.active {
+    border-bottom: 2px solid var(--golden-color);
+    color: var(--golden-color);
+}
+form div {
+    display: flex;
+    flex-direction: column;
+    color: var(--small-text-color);
+    
+}
+div label{
+    font-size:16px ;
+    font-family: mainFont;
+    font-weight: normal;
+    color: var(--small-text-color);
+    letter-spacing: 2px;
+    padding: 5px 0;
+}
+div input{
+    font-size: 16px;
+    font-family: mainFont;
+    color: var(--text-color);
+    padding: 10px;
+    background-color: rgba(46, 45, 45, 0.4);
+    outline: none;
+    border:0.5px solid rgba(46, 45, 45, 0.4);
+    transition: 0.2s;
+    width: 100%;
+}
+div input.E{
+   border:  1px solid rgb(182, 28, 28);
+ }
+ div input.T{
+   border:  1px solid rgb(24, 80, 24);
+ }
+.error {
+    height: 18px;
+    text-align: left;
+    font-size: 16px;
+    font-family: mainFont;
+    font-weight: normal;
+   
+}
+/* .success{
+    height: 16px;
+    text-align: left;
+    font-size: 20px;
+    font-family: mainFont;
+    margin-bottom: 5px;
+} */
+
+div input:focus{
+    border:0.5px solid var(--golden-color);
+}
+button{
+    padding: 10px 16px;
+    background-color: var(--golden-color);
+    color: var(--golden-btn-text-color);
+    font-size: 16px;
+    font-family: mainFont;
+    width: 100%;
+    letter-spacing: 2px;
+    transition: .3s;
+    margin-bottom: 25px;
+}
+button:hover {
+    cursor: pointer;
+    background-color: var(--golden-hover-color);
+    color: var(--golden-btn-text-color);
+    transform: translateY(8px);
+}
+.sign-in P{
+    color:var(--text-color);
+    font-size: 10px;
+    font-family: mainFont;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+.sign-in p span{
+    cursor: pointer;
+    color:#c4a15f;
+}
+.sign-in .Q {
+    margin-top: -5px;
+    font-size: 12px;
+    font-family: mainFont;
+    margin-bottom: 10px;
+}
+.sign-in .Q a{
+    color: var(--golden-color);
+    text-decoration: none;
+}
+.or{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    margin: 15px 0;
+
+}
+.or::after,
+.or::before{
+     content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--small-text-color);
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.diff-way{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 20px;
+}
+.icon{
+    color: var(--small-text-color);
+    font-size: 25px;
+    font-family: mainFont;
+    transition: 0.3s;
+}
+.icon:hover{
+    transform: scale(1.2);
+    
+}
+
