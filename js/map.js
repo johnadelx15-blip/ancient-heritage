@@ -7,16 +7,19 @@ function selected(value) {
     // اللي هو صفحة الماب ويدور فيها
     let infoCnt = window.parent.document.getElementById("information-container");
     let mapCnt = window.parent.document.getElementById("map-container");
+    let mapIf = window.parent.document.getElementById("map-iframe");
     let main = window.parent.document.getElementById("map-main");
     let styled = window.parent.getComputedStyle(infoCnt);
     let top = styled.top;
     if (top === "0px" && current === value) { //يشوف لو الكونتينر معروض وتم الضغط على نفس الزرار
         infoCnt.style.top = "-150vh";
         mapCnt.style.marginRight = "0";
+        mapIf.style.width = "70vw";
         main.style.marginBottom = "0";
     } else {
         infoCnt.style.top = "0";
         mapCnt.style.marginRight = "20%";
+        mapIf.style.width = "60vw";
         main.style.marginBottom = "90px";
         current = value; //بنعرف قيمة اخر زرار عشان لو دوسنا عليه تاني
     }

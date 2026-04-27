@@ -38,34 +38,12 @@
             width: 100%;
         }
 
-        #zoom-in {
-            background-color: #c5a059;
-            padding: 0 1.5vw;
-            border-radius: 20%;
-            border: none;
-            font-size: 5vw;
-            color: #4e3700;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
         #zoom-in:hover {
             transform: scale(0.94)
         }
 
         #zoom-in:active {
             background-color: #b39254;
-        }
-
-        #zoom-out {
-            background-color: #c5a059;
-            padding: 0 2.1vw;
-            border-radius: 20%;
-            border: none;
-            font-size: 5vw;
-            color: #4e3700;
-            cursor: pointer;
-            transition: 0.3s;
         }
 
         #zoom-out:hover {
@@ -82,7 +60,20 @@
             flex-direction: column;
             gap: 3vh;
             margin-left: 2%;
-            margin-top: 55%;
+            top: 4vh;
+        }
+        
+        #zoom-btn button {
+            position: sticky;
+            width: 5vw;
+            height: 5vw;
+            background-color: #c5a059;
+            border-radius: 20%;
+            border: none;
+            font-size: 4vw;
+            color: #4e3700;
+            cursor: pointer;
+            transition: 0.3s;
         }
 
         #pyramid {

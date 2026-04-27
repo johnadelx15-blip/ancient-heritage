@@ -5,12 +5,20 @@
 }
 
 :root {
-    --navBar-color:rgba(19, 19, 19, 0.8);
+    --navBar-color-dark: #131313e6;
+    --navBar-color-light: #fef8efe6;
+    --background-dark: #0a0a0a;
+    --background-light: #f8f2ea;
     --golden-color: #e7c075;
     --golden-hover-color: #bb954f;
     --golden-btn-text-color: #432f01;
-    --text-color: #a4a2a8;
-    --small-text-color: #b5aa9b;
+    --text-dark: #a4a2a8;
+    --text-light: #4e4635;
+    --active-text: rgb(152, 120, 34);
+    --active-text: #987822;
+    --big-text-light: #2b240a;
+    --small-text-dark: #b5aa9b;
+    --footer-light: #e8d9ac;
 }
 
 body {
@@ -18,10 +26,11 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;
-    background-color: #0a0a0a;
+    background-color: var(--background-dark);
     background-image:
         radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.09) 0%, transparent 40%),
         radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.09) 0%, transparent 40%);
+    transition: 0.3s;
 }
 
 
@@ -30,6 +39,88 @@ body {
     src: url(../assets/Fonts/noto-serif.regular.ttf);
 }
 
+.mode-cnt {
+    position: relative;
+    display: flex;
+    background-color: #303030;
+    width: 100px;
+    border-radius: 40px;
+    padding: 5px;
+    align-items: center;
+    left: 200px;
+}
+
+.mode-cnt .span1 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--golden-color);
+    border-radius: 40px;
+    left: calc(100% - 45px);
+    transition: 0.3s ease-in;
+}
+
+.mode-cnt .span2 {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sun {
+    position: absolute;
+    width: 25px;
+    scale: 0;
+    stroke: var(--golden-btn-text-color);
+    fill: var(--golden-btn-text-color);
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: 0.1s ease-in;
+}
+
+.moon {
+    position: absolute;
+    width: 35px;
+    scale: 1;
+    stroke: var(--golden-btn-text-color);
+    fill: var(--golden-btn-text-color);
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: 0.1s ease-in;
+}
+
+.sun2 {
+    position: absolute;
+    width: 25px;
+    scale: 1;
+    stroke: #6a6a6a;
+    fill: #6a6a6a;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    border-radius: 40px;
+    transition: 0.3s;
+}
+
+.moon2 {
+    position: absolute;
+    width: 35px;
+    left: 55px;
+    scale: 0;
+    stroke: var(--golden-color);
+    fill: var(--golden-color);
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: 0.3s;
+    transform-origin: center;
+}
 
 .nav-bar {
     position: sticky;
@@ -38,7 +129,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--navBar-color);
+    background-color: var(--navBar-color-dark);
     color: var(--golden-color);
     font-family: mainFont;
     font-size: 25px;
@@ -46,6 +137,7 @@ body {
     height: 75px;
     padding: 0 40px;
     letter-spacing: 5px;
+    transition: 0.3s;
 }
 
 .nav-cnt {
@@ -61,7 +153,7 @@ body {
 }
 
 .nav-links a {
-    color: var(--text-color);
+    color: var(--text-dark);
     text-decoration: none;
     font-size: 15px;
     transition: 0.4s;
@@ -80,7 +172,7 @@ body {
 
 .sign {
     display: flex;
-
+    
 }
 
 .nav-bar .sign-btn {
@@ -94,9 +186,11 @@ body {
     letter-spacing: normal;
     transition: 0.4s;
 }
-.icon{
+
+.icon {
     display: none;
 }
+
 .nav-bar .sign-btn:hover {
     background-color: var(--golden-hover-color);
     color: var(--golden-btn-text-color);
@@ -111,21 +205,18 @@ main {
     flex: 1;
 }
 
-main {
-    flex: 1;
-}
-
 .footer {
     display: flex;
     height: 90px;
     align-items: center;
     justify-content: space-between;
     font-family: mainFont;
-    background-color: var(--navBar-color);
+    background-color: var(--navBar-color-dark);
     opacity: 0.9;
     color: var(--golden-color);
     padding: 0 40px;
     letter-spacing: 2px;
+    transition: 0.3s;
 }
 
 .footer h5 {
@@ -145,7 +236,7 @@ main {
 }
 
 .footer-links a {
-    color: var(--text-color);
+    color: var(--text-dark);
     text-decoration: none;
     font-size: 15px;
     transition: 0.4s;
