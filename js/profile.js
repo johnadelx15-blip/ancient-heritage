@@ -19,46 +19,7 @@ function removeFromLocal(key, id) {
     localStorage.setItem(key, JSON.stringify(updatedItems));
 }
 
-document.querySelector(".btn").onclick = ()=>{
-    let box = document.createElement("div");
-    box.classList.add("box");
-    let icony = document.createElement("i");
-    icony.classList.add("fa-solid","fa-arrow-right-from-bracket","icony");
-    let heading = document.createElement("h1");
-    heading.classList.add("heading");
-    let warning = document.createElement("h4");
-    warning.classList.add("warn");
-    let hr = document.createElement("div");
-    hr.classList.add("hr");
-    let choice = document.createElement("div");
-    choice.classList.add("choice");
-    let yes = document.createElement("h4");
-    let no = document.createElement("h4");
-    yes.classList.add("yes");
-    no.classList.add("no");
-    document.querySelector("#pop").appendChild(box);
 
-
-    box.appendChild(icony);
-    box.appendChild(heading);
-    box.appendChild(warning);
-    box.appendChild(hr);
-    box.appendChild(choice);
-    choice.appendChild(no);
-    choice.appendChild(yes);
-
-    heading.innerText="Sign Out"
-    warning.innerText ="are you sure you want to sign out ?";
-    yes.innerText ="sign out";
-    no.innerText ="cancel";
-    
-
-
-    
-    document.querySelector(".no").onclick = ()=>{document.querySelector("#pop").removeChild(box);};
-    document.querySelector(".yes").onclick = ()=>{localStorage.clear(user);window.location.href = "../index.html"; };
-    
-}
 
 
 
@@ -86,7 +47,7 @@ for (let j of artifactData) {
     let link =document.createElement("a");
     link.setAttribute("href", "search.html")
     icon.classList.add("fa-solid", "fa-heart", "heart-icon");
-    icon2.classList.add("fa-solid", "fa-arrow-right");
+    icon2.classList.add("fa-solid", "fa-arrow-right","arrow");
 
     icon.onclick = () => {
         removeFromLocal("favorite", j.id);
@@ -128,4 +89,85 @@ for (let j of artifactData) {
     document.querySelector(".fav").appendChild(card)
 }
 
+let main = document.querySelector("main");
+function homeMod(){
+    document.querySelector(".userName").classList.toggle("light");
+    document.querySelector(".userEmail").classList.toggle("light");
+    document.querySelector(".profilePic").classList.toggle("light");
+    let x = document.querySelector(".profilePic");
+    if( x.classList.contains("light") ){
+        x.src = "../assets/Logos/Gemini_Generated_Image_ojby77ojby77ojby.png";
+        x.style.width = "150px";
+        x.style.height = "150px";
+        x.style.transition = "1ms ease-in-out"
+        x.style.border = "2px solid var(--big-text-light)";
+    }
+    document.querySelector(".log").classList.toggle("light");
+    document.querySelector(".btn").classList.toggle("light");
+    document.querySelector(".art").classList.toggle("light");
+    document.querySelector("#pop").classList.toggle("light");
+    document.querySelector("hr").classList.toggle("light");
 
+    let all = document.querySelectorAll(".container");
+    all.forEach(container => {
+    container.classList.toggle("light");
+    container.querySelector(".nameInfo")?.classList.toggle("light");
+    container.querySelector(".cardFooter")?.classList.toggle("light");
+    container.querySelector(".iconBox")?.classList.toggle("light");
+    container.querySelector(".arrow")?.classList.toggle("light");
+    });
+}
+
+if (main.classList.contains("light")) {
+    let currenS = localStorage.setItem("homeMod", "light");
+}
+else {
+    let currentS = localStorage.setItem("homeMod", "dark");
+}
+let savedS = localStorage.getItem("homeMod");
+let savedMod = localStorage.getItem("theme");
+if (savedS !== savedMod) {
+    homeMod();
+}
+
+
+function pop (){
+    let box = document.createElement("div");
+    box.classList.add("box");
+    let icony = document.createElement("i");
+    icony.classList.add("fa-solid","fa-arrow-right-from-bracket","icony");
+    let heading = document.createElement("h1");
+    heading.classList.add("heading");
+    let warning = document.createElement("h4");
+    warning.classList.add("warn");
+    let hr = document.createElement("div");
+    hr.classList.add("hr");
+    let choice = document.createElement("div");
+    choice.classList.add("choice");
+    let yes = document.createElement("h4");
+    let no = document.createElement("h4");
+    yes.classList.add("yes");
+    no.classList.add("no");
+    document.querySelector("#pop").appendChild(box);
+
+
+    box.appendChild(icony);
+    box.appendChild(heading);
+    box.appendChild(warning);
+    box.appendChild(hr);
+    box.appendChild(choice);
+    choice.appendChild(no);
+    choice.appendChild(yes);
+
+    heading.innerText="Sign Out"
+    warning.innerText ="are you sure you want to sign out ?";
+    yes.innerText ="sign out";
+    no.innerText ="cancel";
+    
+
+
+    
+    document.querySelector(".no"||".no.light").onclick = ()=>{document.querySelector("#pop").removeChild(box);};
+    document.querySelector(".yes"||".yes.light").onclick = ()=>{localStorage.removeItem("user");window.location.href = "../index.html"; };
+    
+}
