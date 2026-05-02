@@ -514,7 +514,37 @@ function filterArtifacts(value) {//onclick in html file
     })
 }
 
-window.onload = () => { filterArtifacts("All Museums") } //التلقائي يبقا اول ما نحمل الصفحة
+function showMethodActive(value) {
+    let methods = document.querySelectorAll(".filter-show span")
+    methods.forEach(method => {//changing color of choosing method
+        if (value.toUpperCase() == method.id.toUpperCase()) {
+            method.classList.add("active-method")
+        }
+        else {
+            method.classList.remove("active-method")
+        }
+    })
+}
+
+function cardDisplay(method) {
+    let container = document.getElementById("artifacts-container")
+    if (method.toLowerCase() == 'list') {
+        container.classList.add("list")
+        
+    }
+    else
+        container.classList.remove("list")
+}
+
+
+window.onload = () => {
+    filterArtifacts("All Museums")
+    showMethodActive("grid")
+    cardDisplay('grid')
+} //التلقائي يبقا اول ما نحمل الصفحة
+
+
+
 
 document.getElementById("search").addEventListener("click", () => {
     let search = document.getElementById("search-input").value
@@ -529,6 +559,17 @@ document.getElementById("search").addEventListener("click", () => {
     })
 
 })
+
+function cardDisplay(method) {
+    let container = document.getElementById("artifacts-container")
+    if (method.toLowerCase() == 'list')
+        container.classList.add("list")
+    else
+        container.classList.remove("list")
+}
+
+
+
 
 let search = document.querySelector(".search-window input");
 let cards = document.querySelectorAll(".card")
@@ -555,7 +596,11 @@ function searchMod() {
     icons.forEach((icon) => {
         icon.classList.toggle("light")
     })
-
+    document.querySelector(".filter-show").classList.toggle("light")
+    let spans = document.querySelectorAll(".filter-show span")
+    spans.forEach((span) => {
+        span.classList.toggle("light")
+    })
 }
 if (search.classList.contains("light")) {
     let currenS = localStorage.setItem("searchMod", "light");
