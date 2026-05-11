@@ -10,20 +10,20 @@ body {
 
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-button{
+button {
     margin: 5px;
     height: 40px;
     border-radius: 30px;
     width: 185px;
     font-size: 14px;
-    font-family: 'Times New Roman', Times, serif; 
-    text-transform: uppercase; 
-    letter-spacing: 2px; 
-    background: linear-gradient(to right,var(--table-border) 0%,var(--golden-color) 50%, var(--container-color-light) 100%);
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, var(--table-border) 0%, var(--golden-color) 50%, var(--container-color-light) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0px 0px 5px rgba(230, 194, 0, 0.4);
@@ -62,17 +62,17 @@ button{
     --small-text-dark: #b5aa9b;
     --table_card_background: #353534;
     --table-border: #ffd572;
-    --shadow--: 0 15px 35px rgba(0, 0, 0, 0.5);    
-    --navBar-color-light: rgb(242, 237, 228 , 0.8);
-    --background-light: #f2ede4; 
-    --button-light:#937C63; 
-    --button-hover-light:#7D6852;  
+    --shadow--: 0 15px 35px rgba(0, 0, 0, 0.5);
+    --navBar-color-light: rgb(242, 237, 228, 0.8);
+    --background-light: #f2ede4;
+    --button-light: #937C63;
+    --button-hover-light: #7D6852;
     --footer-light: #f2ede4;
     --container-color-light: #ffffff;
     --container-second-light: #383010;
-    --text-light: #5d3c24;  
-    --small-text-light: #a47231 ;
-    --big-text-light: #3E2F23; 
+    --text-light: #5d3c24;
+    --small-text-light: #a47231;
+    --big-text-light: #3E2F23;
 }
 
 
@@ -99,7 +99,7 @@ button{
     width: 100%;
     text-align: center;
     transition: 0.4s;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 .heading span {
@@ -108,7 +108,7 @@ button{
     margin-bottom: 25px;
     width: 100%;
     text-align: center;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 .cards_container {
@@ -130,13 +130,14 @@ button{
     justify-content: center;
     align-items: center;
 }
+
 .cards_container span {
     color: var(--golden-color);
     padding: 5px;
     margin: 5px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
- 
+
 .card-container:nth-child(1) {
     grid-column: 1 / 5;
 }
@@ -146,16 +147,18 @@ button{
 }
 
 .card-container:nth-child(3) {
-    grid-column:1 / 7;
+    grid-column: 1 / 7;
 }
 
 
 .card-container:nth-child(4) {
-    grid-column:1 / 3 ;
+    grid-column: 1 / 3;
 }
+
 .card-container:nth-child(5) {
     grid-column: 3 / 7;
 }
+
 video {
     transition: transform 0.3s ease, filter 0.3s ease;
     filter: grayscale(40%);
@@ -166,12 +169,13 @@ video {
     display: block;
     border-radius: 20px;
     margin: 10px;
-    opacity: 0; 
+    opacity: 0;
     transition: opacity 0.4s ease, transform 0.3s ease, filter 0.3s ease;
     background-color: transparent;
 }
+
 video:hover {
-    opacity: 1; 
+    opacity: 1;
     transform: scale(1.02);
     filter: grayscale(0%);
 }
@@ -179,15 +183,15 @@ video:hover {
 /* ====================================================================== */
 
 .video-wrapper {
-    position: relative; 
+    position: relative;
     width: 100%;
-    height: 385px; 
-    overflow: hidden; 
+    height: 385px;
+    overflow: hidden;
     border-radius: 20px;
     cursor: pointer;
-    margin-bottom: 10px; 
-    
-    
+    margin-bottom: 10px;
+
+
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -195,11 +199,11 @@ video:hover {
 .video-wrapper img.static-poster {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-    position: absolute; 
+    object-fit: cover;
+    position: absolute;
     top: 0;
     left: 0;
-    z-index: 2; 
+    z-index: 2;
     display: block;
 }
 
@@ -207,57 +211,64 @@ video:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute; 
+    position: absolute;
     top: -8px;
-    left:  -8px;
-    z-index: 2; 
-    
+    left: -8px;
+    z-index: 2;
+
 
     opacity: 0;
     filter: grayscale(40%);
-    
+
 
     transition: opacity 0.4s ease, filter 0.3s ease;
 }
 
 
 .video-wrapper:hover video {
-    opacity: 1; 
+    opacity: 1;
     filter: grayscale(0%);
 }
 
 .video-wrapper:hover {
     transform: scale(1.02);
 }
+
 /* ======================================================================= */
-.video-wrapper #card1{
-   top: -7px;
+.video-wrapper #card1 {
+    top: -7px;
     left: -2px;
 }
-.video-wrapper img#poster3{
+
+.video-wrapper img#poster3 {
     border-radius: 34px;
     width: 99%;
     top: 0px;
-    left: 7px;  
+    left: 7px;
 }
-.video-wrapper img#poster5{
+
+.video-wrapper img#poster5 {
     border-radius: 20px;
     width: 99%;
     top: 0px;
-    left: 4px;  
+    left: 4px;
 }
-.video-wrapper #card3{
-   top: -7px;
-   left: 9px;
+
+.video-wrapper #card3 {
+    top: -7px;
+    left: 9px;
 }
-.video-wrapper #card4{
-   top: -7px;
+
+.video-wrapper #card4 {
+    top: -7px;
     left: -7px;
 }
-.video-wrapper #card5{
-   top: -8px;
+
+.video-wrapper #card5 {
+    top: -8px;
     left: 2px;
 }
+
 /* ======================================================================== */
 
 #card1 {
@@ -284,11 +295,13 @@ video:hover {
     transform: scale(1.02);
     filter: grayscale(0%);
 }
-.museum-n{
-    font-size: 25px ;
+
+.museum-n {
+    font-size: 25px;
 }
-.museum-info{
-    font-size: 15px ;
+
+.museum-info {
+    font-size: 15px;
 }
 
 /* --------------------------------(table)-------------------------------- */
@@ -394,12 +407,14 @@ video:hover {
 .table-museum tfoot tr:hover td {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
+
 /* ============================================================= */
 #footer-r.light:hover {
-    background-image: linear-gradient(to right,rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
-        url("../assets/images/footer-r.png") ;    
-          
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+        url("../assets/images/footer-r.png");
+
 }
+
 .footer-d.light {
     background: rgba(254, 232, 182, 0.2);
     color: var(--text-light);
@@ -425,32 +440,35 @@ video:hover {
 
 .table-museum tfoot td {
     background: rgba(0, 0, 0, 0.2);
-    color: var(--golden-color);  
+    color: var(--golden-color);
 }
 
 
 .table-museum tfoot tr:hover #all-m {
-    
+
     background: linear-gradient(to right, #ffffff, #fffdf0);
-    
-    
+
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
-   
+
+
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
 }
 
- /* ======================================================================================= */
+/* ======================================================================================= */
 .heading h1.light {
     color: var(--text-light);
 }
+
 .heading p.light {
     color: var(--small-text-light);
 }
+
 .heading span.light {
     color: var(--small-text-light);
 }
+
 .card-container.light {
     background-color: var(--container-color-light);
     box-shadow: 0 0 10px rgb(192 95 0 / 28%);
@@ -459,41 +477,51 @@ video:hover {
 .cards_container span.light {
     color: var(--small-text-light);
 }
-button.light{
-    background: linear-gradient(to right,var(--text-light) 0%,var(--small-text-light) 50%, var(--golden-hover-color) 100%);
+
+button.light {
+    background: linear-gradient(to right, var(--text-light) 0%, var(--small-text-light) 50%, var(--golden-hover-color) 100%);
     text-shadow: 0px 0px 5px rgba(230, 194, 0, 0.4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     border-color: var(--table-border);
 }
-.table.light{
+
+.table.light {
     background: var(--container-color-light);
     border: 1px solid var(--table-border);
 }
-.table-museum.light{
+
+.table-museum.light {
     color: var(--small-text-light);
 }
+
 #poster1.light {
-     content: url("../assets/images/Coptic Museum Of Cairo.jfif");
+    content: url("../assets/images/Coptic Museum Of Cairo.jfif");
 }
+
 #poster2.light {
-     content: url("../assets/images/Egyptian Museum.jpg");
+    content: url("../assets/images/Egyptian Museum.jpg");
 }
+
 #poster3.light {
-     content: url("../assets/images/grandlight.png");
+    content: url("../assets/images/grandlight.png");
 }
+
 #poster4.light {
-     content: url("../assets/images/islamic.jfif");
+    content: url("../assets/images/islamic.jfif");
 }
+
 #poster5.light {
-     content: url("../assets/images/NMdownload (4).jpg");
+    content: url("../assets/images/NMdownload (4).jpg");
 }
+
 .table-museum tbody #row1.light:hover {
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
         url("../assets/images/grand egy museum/photo_2026-04-25_16-12-06.jpg");
 }
+
 .table-museum tbody #row2.light:hover {
-    background-image: linear-gradient(to right,rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
         url("../assets/images/egy museum/cairo-museum.jpg");
 }
 
@@ -503,28 +531,22 @@ button.light{
 }
 
 .table-museum tbody #row4.light:hover {
-    background-image: linear-gradient(to right,rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
         url("../assets/images/coptic museum/The Coptic Museum (1).jpg");
 }
 
 .table-museum tbody #row5.light:hover {
-    background-image: linear-gradient(to right,rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
         url("../assets/images/nmec/The National Museum of Egyptian Civilization, Egypt.jpg");
 }
-.table-museum tfoot tr:hover #all-m.light { 
-   
-    background: linear-gradient(to right, var(--text-light) 0%,var(--small-text-light) 50%, var(--golden-hover-color) 100%);
-    
-   
+
+.table-museum tfoot tr:hover #all-m.light {
+    background: linear-gradient(to right, var(--text-light) 0%, var(--small-text-light) 50%, var(--golden-hover-color) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
 }
+
 .table-museum th.light {
     color: var(--text-light);
 }
-
-
-
-
