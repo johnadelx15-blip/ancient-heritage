@@ -388,49 +388,42 @@ let products = {
     ]
 }
 
-//هنشوف الايكون في اللوكال ستورج ولا لا
 function isItemInStorage(key, id) {
-    let savedItems = JSON.parse(localStorage.getItem(key)) || []; //لو فاضي هيبقا ليست فاضية
-    return savedItems.some(item => item.id === id); //Search for the first element that has the same id
-    //
+    let savedItems = JSON.parse(localStorage.getItem(key)) || [];
+    return savedItems.some(item => item.id === id);
 }
 
 function addToLocal(key, value) {
-    let savedItems = JSON.parse(localStorage.getItem(key)) || []//لو فاضي هيبقا ليست فاضية
-    let isExist = false // flag
+    let savedItems = JSON.parse(localStorage.getItem(key)) || [];
+    let isExist = false;
 
     for (let i = 0; i < savedItems.length; i++) {
         if (savedItems[i].id === value.id) {
-            isExist = true; // لو لقيناه بنغير الحالة
-            break; // بنوقف اللوب فورا مش محتاجين نكمل
+            isExist = true;
+            break;
         }
     }
     if (isExist)
-        return
+        return;
 
-    savedItems.push(value) //نضيف العنصر للاراي اللي في اللوكال
-    localStorage.setItem(key, JSON.stringify(savedItems))//نضيف الاراي للوكال
+    savedItems.push(value);
+    localStorage.setItem(key, JSON.stringify(savedItems));
 }
 
 
+for (let i of products.data) {
 
-//هنعمل العناصر باستخدام الجافا 
-for (let i of products.data) {//لوب عادية
-    //=> "i" is our counter ---- i.category == the ith value of "category" key in our dictionary(object)   
+    let card = document.createElement("div");
+    let x = i.category.replaceAll(" ", "-");
+    card.classList.add("card", x, "hide");
 
-    let card = document.createElement("div")
-    let x = i.category.replaceAll(" ", "-")//علشان الكاتيجوري اللي في الأوبجيكت فيها مسافات ولو في مسافات بيعتبر الكلمتين اتنين كلاس مختلفين مش كلاس واحد
-    card.classList.add("card", x, "hide") //adding these classes to each card
+    let imgContainer = document.createElement("div");
+    imgContainer.classList.add("image-container");
+    let image = document.createElement("img");
+    image.setAttribute("src", i.image);
+    imgContainer.appendChild(image);
+    card.appendChild(imgContainer);
 
-    //الديف اللي هيشيل الصورة
-    let imgContainer = document.createElement("div")
-    imgContainer.classList.add("image-container")//كلاس عادي له
-    let image = document.createElement("img")//الصورة نفسها
-    image.setAttribute("src", i.image)//adding src attribute and siiting its value to the image path from the dictionary
-    imgContainer.appendChild(image)//نحط الصورة جوا الديف
-    card.appendChild(imgContainer)//نحط الديف جوا الكارت
-
-    //باقي الكود نفس المنطق
     let textContainer = document.createElement("div")
     textContainer.classList.add("text-container")
 

@@ -11,6 +11,32 @@ const sounds = {
     "abu-simbel": new Audio("../assets/audios/abu-simbel.MP3"),
     "karnak": new Audio("../assets/audios/karnak.MP3")
 };
+
+
+const normal_scale = 1;
+const max_scale = 3;
+const add = 0.2;
+function zoomIn() {
+    let map = document.getElementById("iframe-container");
+    let scale = parseFloat(map.style.scale) || 1;
+    if (scale < max_scale) {
+        map.style.scale = scale + add;
+    }
+    if (parseFloat(map.style.scale) > normal_scale) {
+        document.body.classList.add("grap");
+    }
+}
+function zoomout() {
+    let map = document.getElementById("iframe-container");
+    let scale = parseFloat(map.style.scale);
+    if (scale > normal_scale) {
+        map.style.scale = scale - add;
+    }
+    if (parseFloat(map.style.scale) === normal_scale) {
+        document.body.classList.remove("grap");
+    }
+}
+//----------------------------------------------------------------------------------------------------------------------------------
 function mapMod() {
     let imgs = iframe.contentDocument.querySelectorAll("#icons-container img");
     let p = iframe.contentDocument.querySelectorAll("#icons-container p");
@@ -363,31 +389,6 @@ observer.observe(window.parent.document.getElementById("information-container"),
     childList: true, attributes: true
 });
 //------------------------------------------------------------------------------------------------------------------------------
-
-const normal_scale = 1;
-const max_scale = 3;
-const add = 0.2;
-function zoomIn() {
-    let map = document.getElementById("iframe-container");
-    let scale = parseFloat(map.style.scale) || 1;
-    if (scale < max_scale) {
-        map.style.scale = scale + add;
-    }
-    if (parseFloat(map.style.scale) > normal_scale) {
-        document.body.classList.add("grap");
-    }
-}
-function zoomout() {
-    let map = document.getElementById("iframe-container");
-    let scale = parseFloat(map.style.scale);
-    if (scale > normal_scale) {
-        map.style.scale = scale - add;
-    }
-    if (parseFloat(map.style.scale) === normal_scale) {
-        document.body.classList.remove("grap");
-    }
-}
-//----------------------------------------------------------------------------------------------------------------------------------
 
 iframe.onload = () => {
     if (cnt.classList.contains("light")) {
