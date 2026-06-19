@@ -14,7 +14,13 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('', include('catalog.urls')),
     path('', include('users.urls')),
-    re_path(r'^(?P<path>.*)$', serve, {
-        'document_root': os.path.join(settings.BASE_DIR, '../'), 
+    re_path(r'^pages/(?P<path>.*)$', serve, {
+        'document_root': os.path.join(settings.BASE_DIR, '../Frontend/pages'), 
+    }),
+    re_path(r'^(?P<path>(css|js)/.*)$', serve, {
+        'document_root': os.path.join(settings.BASE_DIR, '../Frontend'), 
+    }),
+    re_path(r'^(?P<path>(images|videos|assets|img)/.*)$', serve, {
+        'document_root': os.path.join(settings.BASE_DIR, '../Frontend'), 
     }),
 ]
