@@ -8,7 +8,7 @@ let products = [];
 
 async function loadArtifacts() {
     try {
-        let response = await fetch('http://127.0.0.1:8000/artifacts/');
+        let response = await fetch('http://127.0.0.1:8000/api/artifacts/');
         let data = await response.json();       
         console.log("Data received from Django:", data);
         products = Array.isArray(data) ? data : (data.artifacts || data);
