@@ -1,377 +1,386 @@
-:root {
-    --navBar-color-dark: #131313e6;
-    --background-dark: #0a0a0a;
-    --golden-color: #e7c075;
-    --golden-hover-color: #bb954f;
-    --golden-btn-text-color: #432f01;
-    --text-dark: #a4a2a8;
-    --active-text: #987822;
-    --small-text-dark: #b5aa9b;
-    --navBar-color-light: rgb(242, 237, 228, 0.8);
-    --background-light: #f2ede4;
-    --button-light: #937C63;
-    --button-hover-light: #7D6852;
-    --footer-light: #f2ede4;
-    --container-color-card: #fcecdb;
-    --container-color-light: #F9F3E5;
-    --container-second-light: #383010;
-    --text-light: #6B4F3A;
-    --big-text-light: #3E2F23;
-}
-
-body {
-    cursor: default;
-}
-
-section {
-    margin: 5% 0%;
-}
-
-.container {
-    margin: 8%;
-    margin-bottom: 6%;
-    width: 90vw;
-    height: 60vh;
-    justify-self: center;
+#container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    font-size: 160%;
-    box-shadow: -5px 5px 15px var(--golden-color);
-}
+    margin-top: -50px;
+    margin-bottom: 30px;
 
-.container.light {
-    box-shadow: -5px 5px 15px var(--button-light);
-}
+    #container-h1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-.start1 {
-    color: var(--background-light);
-    font-weight: unset;
-    margin: 1%;
-    display: inline-block;
-    transform: translate(0px, 400px);
-    text-shadow: 0px 0px 10px var(--golden-color);
-    font-size: 190%;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
+        p {
+            width: 100%;
+            color: #CEC3AE;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            text-align: center;
+        }
+    }
 
-.start1.light {
-    color: var(--container-color-card);
-    text-shadow: 0px 0px 10px var(--big-text-light);
-}
+    #start1 {
+        font-family: "Playfair Display";
+        font-style: normal;
+        font-weight: 700;
+        color: #E5E2E1;
+        font-size: 64px;
+    }
 
-.start2 {
-    color: var(--golden-color);
-    font-weight: unset;
-    display: inline-block;
-    transform: translate(0px, 400px);
-    font-size: 170%;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
+    #start2 {
+        color: #F2CA50;
+        font-family: 'Playfair Display';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 64px;
+    }
 
-.start2.light {
-    color: var(--button-light);
-}
-
-b:hover {
-    display: inline-block;
-    transform: scale(2) !important;
+    img {
+        width: 70%;
+        opacity: 0.5;
+        mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 80%);
+    }
 }
 
 #pic1 {
-    width: 25%;
-    height: 95%;
-    position: relative;
-    box-shadow: -5px 5px 15px black;
-    transition: all 1s ease-out;
-    transform: translateX(1000px);
-}
-
-#pic1.light {
-    box-shadow: -5px 5px 15px var(--text-light);
+    margin-right: -150px;
 }
 
 #pic2 {
-    width: 25%;
-    height: 95%;
-    position: relative;
-    box-shadow: -5px 5px 15px black;
-    transition: all 1s ease-out;
-    transform: translateX(-1000px);
+    margin-left: -150px;
 }
 
-#pic2.light {
-    box-shadow: -5px 5px 15px var(--text-light) !important;
+#history-container {
+    width: 80%;
+    margin: 0 auto;
+
+    .number {
+        color: #F2CA50;
+        font-family: 'Playfair Display';
+        opacity: 0.4;
+        transition: 1s;
+    }
+
+    .location {
+        display: flex;
+        font-family: 'Montserrat';
+        font-size: 12px;
+        color: #D0C5AF;
+        font-style: normal;
+        font-weight: 600;
+        align-items: center;
+
+        svg {
+            width: 14px;
+            height: 20px;
+            fill: #D0C5AF;
+            margin-right: 5px;
+        }
+    }
+
+    .line {
+        flex-grow: 1;
+        height: 1px;
+        background-color: #3F371F;
+        margin: 0 30px;
+        margin-top: 20px;
+    }
+
+    #top-sec {
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+
+        h6 {
+            color: #F2CA50;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        p {
+            color: #E5E2E1;
+            font-family: 'Playfair Display';
+            font-size: 40px;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        div {
+            display: flex;
+            align-items: end;
+
+            a {
+                text-decoration: none;
+                color: #D0C5AF;
+                font-family: 'Montserrat';
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 600;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+                text-transform: uppercase;
+                transition: 0.5s;
+            }
+
+            svg {
+                width: 20px;
+                height: 20px;
+                fill: #D0C5AF;
+                transition: 0.5s;
+            }
+
+            a:hover {
+                color: #F2CA50;
+
+                svg {
+                    fill: #F2CA50;
+                    transform: translateX(3px);
+                }
+            }
+        }
+    }
+
+    img {
+        filter: sepia(40%);
+        border-radius: 15px;
+        border: 0.5px solid #352E1C;
+        transition: 1s;
+        object-fit: cover;
+        object-view-box: inset(0% 0% 0% 0%);
+        margin-bottom: 15px;
+    }
+
+    div:hover img {
+        filter: sepia(0%);
+        object-view-box: inset(2% 2% 2% 2%);
+    }
+
+    div:hover .number {
+        opacity: 1;
+    }
 }
 
-#pic1.transition {
-    transform: translate(480px, 50px);
-}
-
-#pic2.transition {
-    transform: translate(-470px, -220px);
-}
-
-.homeEnd {
-    width: 90vw;
-    height: 60vh;
-    justify-self: center;
-    box-shadow: -5px 5px 15px var(--golden-color);
+#pics-sec {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 75px;
+}
+
+#egyptian-museum {
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+
+    img {
+        width: 550px;
+    }
+
+    section {
+        display: flex;
+        font-size: 28px;
+        font-family: 'Playfair Display';
+        font-weight: 500;
+        font-style: normal;
+        color: #E5E2E1;
+    }
+}
+
+#islamic-museum {
+    width: fit-content;
+    cursor: pointer;
+    margin-top: 60px;
+
+    img {
+        width: 450px;
+    }
+
+    section {
+        display: flex;
+        font-size: 28px;
+        font-family: 'Playfair Display';
+        font-weight: 500;
+        font-style: normal;
+        color: #E5E2E1;
+    }
+}
+
+#grand-museum {
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    margin-top: -270px;
+    margin-left: 30px;
+
+    img {
+        width: 500px;
+    }
+
+    section {
+        display: flex;
+        font-size: 28px;
+        font-family: 'Playfair Display';
+        font-weight: 500;
+        font-style: normal;
+        color: #E5E2E1;
+    }
+}
+
+#titleFeatures {
+    font-size: 40px;
+    color: #E5E2E1;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 600;
     text-align: center;
-    margin: 4%;
-    margin-top: 6%;
-    font-size: 110%;
-    gap: 5%;
+    margin-top: 200px;
 
-    h1 {
-        color: var(--golden-color);
-        font-size: 320%;
-    }
-
-    h3 {
-        color: var(--small-text-dark);
-    }
-
-    p {
-        color: var(--text-dark);
-        width: 60%;
-    }
-
-    a {
-        text-decoration: none;
-        color: var(--golden-color);
-        font-size: 120%;
-        margin: 2%;
-        border: 3px solid var(--golden-color);
-        padding: 0.8% 1.8%;
-        transition: 0.4s ease-out;
-    }
-
-    a:hover {
-        scale: 1.05;
-    }
-
-}
-
-.homeEnd.light {
-    box-shadow: -5px 5px 15px var(--button-light);
-
-    h1 {
-        color: var(--big-text-light);
-    }
-
-    h3 {
-        color: var(--button-hover-light);
-    }
-
-    p {
-        color: var(--button-light);
-    }
-
-    a {
-        color: var(--big-text-light);
-        border: 3px solid var(--big-text-light);
+    div {
+        background-color: #F2CA50;
+        height: 0.5px;
+        width: 50px;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 100px;
     }
 }
 
-
-.container-slides {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    gap: 100px;
-    padding: 80px 50px;
-    scroll-behavior: smooth;
-}
-
-.container-slides::-webkit-scrollbar {
-    display: none;
-}
-
-.history-container {
-    perspective: 1000px;
-}
-
-.history {
-    min-width: 350px;
-    height: 400px;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: 1s;
-}
-
-.history-container:hover .history {
-    transform: rotateY(180deg);
-}
-
-.back,
-.front {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    background-color: linear-gradient(rgba(0, 0, 0, 0.3));
-}
-
-.back.light,
-.front.light {
-    box-shadow: 0 10px 20px rgb(107, 79, 58, 0.2);
-}
-
-.coptic {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url(../assets/images/Coptic_Museum.jpeg);
-    background-size: cover;
-}
-
-.coptic.light {
-    background-image: url(../assets/images/Coptic_Museum.jpeg);
-}
-
-.grand {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url(../assets/images/grand\ Egyptian\ museum.jpeg);
-    background-size: cover;
-}
-
-.grand.light {
-    background-image: url(../assets/images/grand\ Egyptian\ museum.jpeg);
-}
-
-.art {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url(../assets/images/islamic.jpeg);
-    background-size: cover;
-}
-
-.art.light {
-    background-image: url(../assets/images/islamic.jpeg);
-}
-
-.egy {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url(../assets/images/photo_6030414167451307199_y.jpg);
-    background-size: cover;
-}
-
-.egy.light {
-    background-image: url(../assets/images/photo_6030414167451307199_y.jpg);
-}
-
-.nmec {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url(../assets/images/NMEC.jpeg);
-    background-size: cover;
-}
-
-.nmec.light {
-    background-image: url(../assets/images/NMEC.jpeg);
-}
-
-.back {
-    background-color: var(--navBar-color-dark);
-    padding: 50px;
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.back.light {
-    background-color: var(--navBar-color-light);
-}
-
-.back h3 {
-    color: var(--golden-color);
-    font-size: 30px;
-}
-
-.back h3.light {
-    color: var(--big-text-light);
-}
-
-.back p {
-    color: var(--small-text-dark);
-    font-size: 20px;
-    line-height: 1.3;
-}
-
-.back p.light {
-    color: var(--text-light);
-}
-
-
-.feature {
+#feature {
     display: flex;
     justify-content: center;
     gap: 50px;
-    margin: 50px 100px;
 }
 
 .card {
-    box-shadow: var(--golden-color) 1px 1px 1px 0px;
-    background-color: var(--navBar-color-dark);
-    padding: 40px 20px;
-    border-radius: 15px;
-    transition: transform 0.3s ease;
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    align-items: center;
+    background-color: #1A1919;
+    padding: 48px;
+    border-radius: 12px;
+    border: 1px solid #362F1D;
+    width: 350px;
     transition: 0.3s;
-}
 
-.card.light {
-    box-shadow: var(--big-text-light) 1px 1px 1px 0px;
-    background-color: var(--navBar-color-light);
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #F2CA501A;
+        width: 64px;
+        height: 64px;
+        border-radius: 50px;
+        margin-bottom: 32px;
+        transition: 0.5s;
+
+        svg {
+            width: 36px;
+            height: 40px;
+            fill: #F2CA50;
+        }
+    }
 }
 
 .card:hover {
-    transform: translateY(-15px);
-    box-shadow: var(--golden-color) 1px 2px 8px 0px;
+    border: 1px solid #72602F;
+
+    div {
+        scale: 1.1;
+    }
 }
 
-.card.light:hover {
-    box-shadow: var(--big-text-light) 1px 2px 8px 0px;
-}
-
-.titleFeatures {
-    font-size: 40px;
-    text-align: center;
-    color: var(--small-text-dark);
-    font-family: mainFont;
-}
-
-.titleFeatures.light {
-    color: var(--big-text-light)
-}
 
 .titleCard {
-    font-size: 25px;
-    color: var(--small-text-dark);
-    text-align: center;
-    font-family: mainFont;
+    font-size: 28px;
+    color: #E5E2E1;
+    font-family: 'Playfair Display';
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 16px;
 }
 
-.titleCard.light {
-    color: var(--big-text-light)
+.describtion {
+    font-size: 16px;
+    color: #D0C5AF;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-style: normal;
+    line-height: 26px;
 }
 
-.describtion3 {
-    font-size: 20px;
-    color: var(--small-text-dark);
-    text-align: center;
-    font-family: mainFont;
-}
+#homeEnd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: fit-content;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 150px;
 
-.describtion3.light {
-    color: var(--text-light);
+    div {
+        border: 1px solid #f2ca5033;
+        color: #F2CA50;
+        font-family: 'Montserrat';
+        font-size: 12px;
+        border-radius: 50px;
+        font-weight: 600;
+        padding: 7px 16px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+    
+    h1 {
+        font-size: 64px;
+        color: #E5E2E1;
+    }
+    
+    h3 {
+        font-family: 'Playfair Display';
+        color: #F2CA50CC;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 28px;
+    }
+    
+    p {
+        color: #D0C5AF;
+        font-family: 'Montserrat';
+        font-size: 18px;
+        font-weight: 400;
+        font-style: normal;
+        width: 40%;
+        text-align: center;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #F2CA50;
+        padding: 20px 48px;
+        font-size: 12px;
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-style: normal;
+        border-radius: 50px;
+        border: 1px solid #F2CA50;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        box-shadow: #d4af371a 0px 0px 40px 0px;
+        margin-bottom: 130px;
+        transition: 0.5s;
+    }
+
+    a:hover {
+        background-color: #F2CA50;
+        color: #111111;
+    }
+
 }

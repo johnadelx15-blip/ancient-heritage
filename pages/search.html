@@ -16,60 +16,30 @@
 </head>
 
 <body>
-    <nav class="nav-bar">
-        <div class="nav-text">
-            ANCIENT HERITAGE
-        </div>
-        <div class="nav-cnt">
-            <div class="nav-links">
+    <div id="nav-bar">
+        <nav>
+            <div id="nav-text">
+                ANCIENT HERITAGE
+            </div>
+            <div id="nav-links">
                 <a href="../index.html">Home</a>
                 <a href="archive.html">Archive</a>
                 <a href="museums.html">Museum</a>
                 <a href="map.html">Map</a>
                 <a href="search.html" class="active">Search</a>
             </div>
-            <div class="mode-cnt" onclick="changeMod(); searchMod()">
-                <span class="span1">
-                    <svg class="sun" viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                    <svg class="moon" viewBox="0 0 24 24">
+            <div id="sign">
+                <div id="mode-btn" onclick="changeMod(); searchMod();">
+                    <svg viewBox="0 -960 960 960">
                         <path
-                            d="M18 15.63c-.977.52-1.945.481-3.13.481A6.981 6.981 0 0 1 7.89 9.13c0-1.185-.04-2.153.481-3.13C6.166 7.174 5 9.347 5 12.018A6.981 6.981 0 0 0 11.982 19c2.67 0 4.844-1.166 6.018-3.37ZM16 5c0 2.08-.96 4-3 4 2.04 0 3 .92 3 3 0-2.08.96-3 3-3-2.04 0-3-1.92-3-4Z" />
+                            d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z" />
                     </svg>
-                </span>
-                <span class="span2">
-                    <svg class="moon2" viewBox="0 0 24 24">
-                        <path
-                            d="M18 15.63c-.977.52-1.945.481-3.13.481A6.981 6.981 0 0 1 7.89 9.13c0-1.185-.04-2.153.481-3.13C6.166 7.174 5 9.347 5 12.018A6.981 6.981 0 0 0 11.982 19c2.67 0 4.844-1.166 6.018-3.37ZM16 5c0 2.08-.96 4-3 4 2.04 0 3 .92 3 3 0-2.08.96-3 3-3-2.04 0-3-1.92-3-4Z" />
-                    </svg>
-                    <svg class="sun2" viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </span>
+                </div>
+                <a id="sign-btn" href="sign-up.html">Sign up</a>
+                <a id="icon" class="icon" href="profile.html"><i class="fa-solid fa-circle-user"></i></a>
             </div>
-        </div>
-        <div class="sign">
-            <a class="sign-btn" id="sign-btn" href="sign-up.html">Sign up</a>
-            <a id="icon" class="icon" href="profile.html"><i class="fa-solid fa-circle-user"></i></a>
-        </div>
-    </nav>
+        </nav>
+    </div>
     <main>
         <div class="search-window">
             <input type="search" id="search-input" placeholder="Search By Artifact Name Or Museum...">
@@ -104,7 +74,7 @@
                 ANCIENT HERITAGE
             </h5>
             <p>
-                &copy; 2026 CAPITAL UNIVERSITY. All Rights Reserved.
+                &copy; 2026 JOHN ADEL. All Rights Reserved.
             </p>
         </div>
         <div class="footer-links">

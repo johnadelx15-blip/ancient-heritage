@@ -1,6 +1,34 @@
 @font-face {
-    font-family: mainFont;
-    src: url(../assets/Fonts/noto-serif.regular.ttf);
+    font-family: 'Playfair Display';
+    src: url('../assets/Fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 400 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../assets/Fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 400 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../assets/Fonts/Montserrat-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../assets/Fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
 }
 
 * {
@@ -8,27 +36,6 @@
     padding: 0;
     box-sizing: border-box
 }
-
-:root {
-    --navBar-color-dark: #131313e6;
-    --background-dark: #0a0a0a;
-    --golden-color: #e7c075;
-    --golden-hover-color: #bb954f;
-    --golden-btn-text-color: #432f01;
-    --text-dark: #a4a2a8;
-    --active-text: #987822;
-    --small-text-dark: #b5aa9b;
-    --navBar-color-light: rgb(242, 237, 228, 0.8);
-    --background-light: #f2ede4;
-    --button-light: #937C63;
-    --button-hover-light: #7D6852;
-    --footer-light: #f2ede4;
-    --container-color-light: #F9F3E5;
-    --container-second-light: #383010;
-    --text-light: #6B4F3A;
-    --big-text-light: #3E2F23;
-}
-
 
 ::selection {
     background-color: #c59f59c5;
@@ -40,314 +47,182 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;
-    background-color: var(--background-dark);
-    background-image:
-        radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.09) 0%, transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.09) 0%, transparent 40%);
-    background-repeat: no-repeat;
+    background: radial-gradient(circle at center,
+            rgba(212, 175, 55, 0.08) 0%,
+            rgba(17, 17, 17, 1) 70%);
+
+    background-color: #111111;
     transition: 0.3s;
-    cursor: default;
+    background-attachment: fixed;
 }
 
 body.light {
-    background-color: var(--background-light);
+    background-color: #f2ede4;
     background-image:
         radial-gradient(circle at 20% 30%, rgba(159, 132, 41, 0.09) 0%, transparent 40%),
         radial-gradient(circle at 80% 70%, rgba(159, 132, 41, 0.09) 0%, transparent 40%);
 }
 
-.mode-cnt {
-    position: relative;
-    display: flex;
-    background-color: #303030;
-    width: 100px;
-    border-radius: 40px;
-    padding: 5px;
-    align-items: center;
-    left: 12vw;
-    cursor: pointer;
-    transition: 0.3s;
+#mode-btn {
+    svg {
+        width: 30px;
+        height: 30px;
+        fill: #F2CA50;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    svg:hover {
+        transform: rotate(10deg);
+    }
 }
 
-.mode-cnt.light {
-    background-color: #e3d4c4;
-}
-
-.mode-cnt .span1 {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--golden-color);
-    border-radius: 40px;
-    left: calc(100% - 45px);
-    transition: 0.3s ease-in;
-}
-
-.mode-cnt .span1.light {
-    left: 5px;
-    background-color: var(--footer-light);
-}
-
-.mode-cnt .span2 {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sun {
-    position: absolute;
-    width: 25px;
-    scale: 0;
-    stroke: var(--golden-btn-text-color);
-    fill: var(--golden-btn-text-color);
-    stroke-width: 2px;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    transition: 0.2s ease-in;
-}
-
-.sun.light {
-    scale: 1;
-}
-
-.moon {
-    position: absolute;
-    width: 35px;
-    scale: 1;
-    stroke: var(--golden-btn-text-color);
-    fill: var(--golden-btn-text-color);
-    stroke-width: 2px;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    transition: 0.2s ease-in;
-}
-
-.moon.light {
-    scale: 0;
-}
-
-.sun2 {
-    position: absolute;
-    width: 25px;
-    scale: 1;
-    stroke: #6a6a6a;
-    fill: #6a6a6a;
-    stroke-width: 2px;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    border-radius: 40px;
-    transition: 0.3s;
-}
-
-.sun2.light {
-    scale: 0;
-}
-
-.moon2 {
-    position: absolute;
-    width: 35px;
-    left: 55px;
-    scale: 0;
-    stroke: #62522e;
-    fill: #62522e;
-    stroke-width: 2px;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    transition: 0.3s;
-    transform-origin: center;
-}
-
-.moon2.light {
-    scale: 1;
-}
-
-.nav-bar {
+#nav-bar {
     position: sticky;
     top: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--navBar-color-dark);
-    color: var(--golden-color);
-    font-family: mainFont;
-    font-size: 25px;
     width: 100%;
-    height: 75px;
-    padding: 0 40px;
-    letter-spacing: 5px;
-    transition: 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#nav-bar nav {
+    background-color: #131313b9;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 100px;
+    width: 85%;
+    margin: 25px;
+    padding: 15px 40px;
+    border: 0.5px solid #d4af3763;
+    box-shadow: 0 0 30px #d4af3727;
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav-bar.light {
-    background-color: var(--navBar-color-light);
-    color: var(--big-text-light);
+    background-color: rgb(242, 237, 228, 0.8);
+    color: #3E2F23;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.nav-cnt {
-    display: flex;
-    gap: 50px;
-    margin-right: 50px;
+#nav-text {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #F2CA50;
 }
 
-.nav-links {
+#nav-links {
     display: flex;
-    gap: 50px;
+    gap: 30px;
     align-items: center;
 }
 
-.nav-links a {
-    color: var(--text-dark);
+#nav-links a {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
     text-decoration: none;
+    text-transform: uppercase;
+    color: #D0C5AF;
     font-size: 15px;
     transition: 0.4s;
-    letter-spacing: normal;
+    letter-spacing: 0.15em;
 }
 
-.nav-links a.light {
-    color: var(--text-light);
+#nav-bar a:hover {
+    color: #e7c075;
 }
 
-.nav-bar a:hover {
-    color: var(--golden-color);
-}
-
-.nav-links a.light:hover {
-    color: var(--active-text);
-}
-
-.nav-links a.active {
-    color: var(--golden-color);
+#nav-links a.active {
+    color: #F2CA50;
     text-decoration: underline;
     text-underline-offset: 6px;
 }
 
-.nav-links a.active-light {
-    color: var(--active-text);
-    text-decoration: underline;
-    text-underline-offset: 6px;
-}
-
-.sign {
+#sign {
     display: flex;
+    align-items: center;
+    gap: 25px;
 }
 
-.nav-bar .sign-btn {
-    position: relative;
-    padding: 5px 16px;
-    background-color: var(--golden-color);
-    border-radius: 12px;
-    color: var(--golden-btn-text-color);
-    font-size: 20px;
+#nav-bar #sign-btn {
+    font-family: 'Montserrat';
+    font-weight: 550;
+    font-size: 15px;
+    padding: 10px 25px;
+    height: fit-content;
+    background-color: #F2CA50;
+    border-radius: 100px;
+    color: #3C2F00;
     text-decoration: none;
     letter-spacing: normal;
     transition: 0.4s;
-    user-select: none;
-}
-
-.nav-bar .sign-btn.light {
-    background-color: var(--button-light);
-    color: #ffffff;
 }
 
 .icon {
     display: none;
-    color: var(--golden-color);
+    color: #e7c075;
     font-size: 40px;
     transition: 0.4s;
 }
 
-.icon.light {
-    color: var(--button-light);
-}
 
-.nav-bar .sign-btn:hover {
-    background-color: var(--golden-hover-color);
-    color: var(--golden-btn-text-color);
-}
-
-.nav-bar .sign-btn.light:hover {
-    background-color: var(--button-hover-light);
-    color: white;
-}
-
-main {
-    flex: 1;
-}
-
-.footer {
+#footer {
     display: flex;
     height: 50px;
     align-items: center;
     justify-content: space-between;
-    font-family: mainFont;
-    background-color: var(--navBar-color-dark);
+    border-top: 0.5px solid #2A2619;
+    background-color: #131313;
     opacity: 0.9;
-    color: var(--golden-color);
-    padding: 0 40px;
-    letter-spacing: 2px;
+    padding: 50px 40px;
     transition: 0.4s;
+
+    h5 {
+        color: #F2CA50;
+        font-family: 'Playfair Display';
+        font-size: 28px;
+        letter-spacing: 1px;
+        font-style: normal;
+    }
+
+    p {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: #D0C5AF;
+    }
 }
 
-.footer.light {
-    background-color: var(--footer-light);
-    color: var(--big-text-light);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.footer h5 {
-    font-size: 17px;
-    font-weight: normal;
-}
-
-.footer p {
-    font-size: 10px;
-    color: var(--text-color);
-}
-
-.footer-links {
+#footer-links {
     display: flex;
     gap: 30px;
     align-items: center;
     justify-content: flex-end;
+
+    a {
+        color: #a4a2a8;
+        text-decoration: none;
+        font-size: 15px;
+        transition: 0.4s;
+        letter-spacing: normal;
+    }
 }
 
-.footer-links a {
-    color: var(--text-dark);
-    text-decoration: none;
-    font-size: 15px;
-    transition: 0.4s;
-    letter-spacing: normal;
+#footer-links a:hover {
+    color: #e7c075;
 }
 
-.footer-links a.light {
-    color: var(--big-text-light);
-}
-
-.footer-links a.light:hover {
-    color: var(--active-text);
-}
-
-.footer-links a:hover {
-    color: var(--golden-color);
-}
-
-.footer-links a.active {
-    color: var(--golden-color);
+#footer-links a.active {
+    color: #e7c075;
     text-decoration: underline;
     text-underline-offset: 6px;
-}
-
-.footer-links a.active-light {
-    color: var(--active-text)
-}
-
-.footer-links a.active-light:hover {
-    color: var(--active-text)
 }
