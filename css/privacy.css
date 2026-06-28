@@ -1,23 +1,3 @@
-:root {
-    --navBar-color-dark: #131313e6;
-    --background-dark: #0a0a0a;
-    --golden-color: #e7c075;
-    --golden-hover-color: #bb954f;
-    --golden-btn-text-color: #432f01;
-    --text-dark: #a4a2a8;
-    --active-text: #987822;
-    --small-text-dark: #b5aa9b;
-    /*بني*/
-    --navBar-color-light: rgb(242, 237, 228, 0.8);
-    --background-light: #f2ede4;
-    --button-light: #937C63;
-    --button-hover-light: #7D6852;
-    --footer-light: #f2ede4;
-    --container-color-light: #F9F3E5;
-    --container-second-light: #383010;
-    --text-light: #6B4F3A;
-    --big-text-light: #3E2F23;
-}
 body{
     cursor: default;
 }
@@ -41,14 +21,14 @@ body{
 }
 
 h1, h3 {
-    color: var(--golden-color);
+    color: #e7c075;
     font-family: mainFont;
     font-weight: normal;
 }
 
 h1.light,
 h3.light {
-    color: var(--big-text-light);
+    color: #3E2F23;
 }
 
 h1 {
@@ -61,7 +41,7 @@ h3 {
 }
 p ,li{
     
-    color: var(--small-text-dark);
+    color: #b5aa9b;
     font-family: mainFont;
     line-height: 1.4;
     letter-spacing: 1px;
@@ -69,7 +49,7 @@ p ,li{
 
 p.light,
 li.light {
-    color: var(--text-light);
+    color: #6B4F3A;
 }
 
 li {

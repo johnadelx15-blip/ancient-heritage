@@ -1,24 +1,3 @@
-:root {
-    --navBar-color-dark: #131313e6;
-    --background-dark: #0a0a0a;
-    --golden-color: #e7c075;
-    --golden-hover-color: #bb954f;
-    --golden-btn-text-color: #432f01;
-    --text-dark: #a4a2a8;
-    --active-text: #987822;
-    --small-text-dark: #b5aa9b;
-    --navBar-color-light: rgb(242, 237, 228, 0.8);
-    --background-light: #f2ede4;
-    --button-light: #937C63;
-    --button-hover-light: #7D6852;
-    --footer-light: #f2ede4;
-    --card-background-color: #353534;
-    --container-color-light: #F9F3E5;
-    --container-second-light: #ffffff;
-    --text-light: #6B4F3A;
-    --big-text-light: #3E2F23;
-}
-
 img {
     border-radius: 10px;
 }
@@ -28,7 +7,7 @@ main {
 }
 
 .search-header {
-    color: var(--text-dark);
+    color: #a4a2a8;
     font-size: 40px;
     margin-left: 11%;
     margin-top: 12px;
@@ -36,7 +15,7 @@ main {
 }
 
 .search-header.light {
-    color: var(--text-light);
+    color: #6B4F3A;
 }
 
 .search-window {
@@ -46,7 +25,7 @@ main {
 
 .search-window input {
     height: 42px;
-    background-color: var(--card-background-color);
+    background-color: #353534;
     border: none;
     width: 70%;
     font-size: 16px;
@@ -59,12 +38,12 @@ main {
 }
 
 .search-window input.light {
-    background-color: var(--container-second-light);
+    background-color: #ffffff;
     color: #0a0a0a;
 }
 
 input.light::placeholder {
-    color: var(--text-dark) !important;
+    color: #a4a2a8 !important;
     transition: 0.3s;
 }
 
@@ -75,7 +54,7 @@ input.light::placeholder {
 
 .search-window button {
     width: 8%;
-    background-color: var(--golden-color);
+    background-color: #e7c075;
     cursor: pointer;
     border: none;
     transition: 0.3s;
@@ -84,16 +63,16 @@ input.light::placeholder {
 }
 
 .search-window button.light {
-    background-color: var(--button-light);
+    background-color: #937C63;
     color: white;
 }
 
 .search-window button:hover {
-    background-color: var(--golden-hover-color);
+    background-color: #bb954f;
 }
 
 .search-window button.light:hover {
-    background-color: var(--button-hover-light);
+    background-color: #7D6852;
 }
 
 .filters {
@@ -104,10 +83,10 @@ input.light::placeholder {
 }
 
 .filter-show {
-    border: 1px solid var(--golden-color);
+    border: 1px solid #e7c075;
     border-radius: 10px;
     align-self: center;
-    color: var(--small-text-dark);
+    color: #b5aa9b;
     height: 35px;
     display: flex;
     align-items: center;
@@ -115,8 +94,8 @@ input.light::placeholder {
 }
 
 .filter-show.light {
-    color: var(--text-light) !important;
-    border: 1px solid var(--button-light) !important;
+    color: #6B4F3A !important;
+    border: 1px solid #937C63 !important;
 }
 
 .filter-show span {
@@ -132,14 +111,14 @@ input.light::placeholder {
 }
 
 .active-method {
-    background-color: var(--golden-color);
-    color: var(--golden-btn-text-color);
+    background-color: #e7c075;
+    color: #432f01;
     border-radius: 2px;
 }
 
 .active-method.light {
-    border: var(--button-light);
-    background-color: var(--button-light) !important;
+    border: #937C63;
+    background-color: #937C63 !important;
     color: white !important;
 }
 
@@ -152,36 +131,36 @@ input.light::placeholder {
 .categories button {
     padding: 8px 16px;
     border-radius: 15px;
-    border: 2px solid var(--golden-color);
+    border: 2px solid #e7c075;
     background-color: transparent;
-    color: var(--small-text-dark);
+    color: #b5aa9b;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .categories button:hover {
-    background-color: var(--golden-color);
-    color: var(--golden-btn-text-color);
+    background-color: #e7c075;
+    color: #432f01;
 }
 
 .categories button.light {
-    border: 2px solid var(--button-light);
-    color: var(--text-light);
+    border: 2px solid #937C63;
+    color: #6B4F3A;
 }
 
 .categories button.light:hover {
-    background-color: var(--button-light);
+    background-color: #937C63;
     color: white;
 }
 
 .active-category {
-    background-color: var(--golden-color) !important;
-    color: var(--golden-btn-text-color) !important;
+    background-color: #e7c075 !important;
+    color: #432f01 !important;
     transition: 0.3s;
 }
 
 .active-category.light {
-    background-color: var(--button-light) !important;
+    background-color: #937C63 !important;
     color: white !important;
 }
 
@@ -197,18 +176,17 @@ input.light::placeholder {
 
 .card {
     position: relative;
-    background-color: var(--card-background-color);
+    background-color: #353534;
     max-width: 19em;
     padding: 8px;
     height: 390px;
     border-radius: 10px;
-
     transition: 0.3s;
 }
 
 .card.light,
 #artifacts-container.list .card.light {
-    background-color: var(--container-second-light);
+    background-color: #ffffff;
 }
 
 .image-container {
@@ -224,12 +202,12 @@ img {
 
 .artifact-header {
     margin-top: 10px;
-    color: var(--golden-color);
+    color: #e7c075;
     font-size: 12px;
 }
 
 .artifact-name {
-    color: var(--text-dark);
+    color: #a4a2a8;
     margin-top: 5px;
     font-size: 20px;
     width: 240px;
@@ -238,11 +216,11 @@ img {
 
 .artifact-name.light,
 #artifacts-container.list .artifact-name.light {
-    color: var(--big-text-light);
+    color: #3E2F23;
 }
 
 .artifacte-subtitle {
-    color: var(--small-text-dark);
+    color: #b5aa9b;
     margin-top: 10px;
     width: 240px;
     transition: 0.3s;
@@ -250,7 +228,7 @@ img {
 
 .artifacte-subtitle.light,
 #artifacts-container.list .artifacte-subtitle.light {
-    color: var(--big-text-light) !important;
+    color: #3E2F23 !important;
 }
 
 .card-footer {
@@ -276,13 +254,13 @@ img {
 
 .heart-icon,
 .archive-icon {
-    color: var(--golden-color);
+    color: #e7c075;
     cursor: pointer;
 }
 
 .heart-icon.light,
 .archive-icon.light {
-    color: var(--button-light);
+    color: #937C63;
 }
 
 .active-icon {
@@ -307,7 +285,7 @@ img {
     position: relative;
     display: flex;
     gap: 15px;
-    background-color: var(--card-background-color);
+    background-color: #353534;
     width: 100%;
     max-width: none;
     height: auto;
@@ -338,12 +316,12 @@ img {
 
 #artifacts-container.list .artifact-header {
     margin-top: 10px;
-    color: var(--golden-color);
+    color: #e7c075;
     font-size: 12px;
 }
 
 #artifacts-container.list .artifact-name {
-    color: var(--text-dark);
+    color: #a4a2a8;
     /* margin-top: 5px; */
     font-size: 20px;
     width: 100%;
@@ -351,7 +329,7 @@ img {
 }
 
 #artifacts-container.list .artifacte-subtitle {
-    color: var(--small-text-dark);
+    color: #b5aa9b;
     margin-top: 10px;
     width: 100%;
     transition: 0.3s;

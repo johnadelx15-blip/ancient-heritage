@@ -40,13 +40,30 @@
     </div>
 
     <main id="main">
+        <div id="search">
+            <input type="search" id="search-bar" placeholder="Search the eternal archives...">
+            <svg viewBox="0 -960 960 960" onclick="searcher()">
+                <path
+                    d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+            </svg>
+        </div>
+        <div id="quick">
+            <p>quick tags:</p>
+            <div>
+                <section id="icons" onclick="quick(this.id)">icons</section>
+                <section id="statues" onclick="quick(this.id)">statues</section>
+                <section id="artifacts" onclick="quick(this.id)">artifacts</section>
+                <section id="manuscripts" onclick="quick(this.id)">manuscripts</section>
+                <section id="all" class="active" onclick="quick(this.id)">all</section>
+            </div>
+        </div>
         <div id="artifacts-container">
 
         </div>
     </main>
 
-    <footer class="footer">
-        <div class="copy-right">
+    <footer id="footer">
+        <div id="copy-right">
             <h5>
                 ANCIENT HERITAGE
             </h5>
@@ -54,12 +71,13 @@
                 &copy; 2026 JOHN ADEL. All Rights Reserved.
             </p>
         </div>
-        <div class="footer-links">
+        <div id="footer-links">
             <a href="https://www.capu.edu.eg/index.php/ar/" target="_blank">University site</a>
             <a href="feedback.html">Feed Back</a>
             <a href="about.html">About Us</a>
         </div>
     </footer>
+    <script src="../js/data.js"></script>
     <script src="../js/archive.js"></script>
     <script src="../js/main.js"></script>
 </body>

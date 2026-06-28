@@ -1,24 +1,3 @@
-:root {
-    --black: #000;
-    --navBar-color-dark: #131313e6;
-    --navBar-color-light: #fef8efe6;
-    --background-dark: #0a0a0a;
-    --background-light: #f8f2ea;
-    --golden-color: #e7c075;
-    --golden-hover-color: #bb954f;
-    --golden-btn-text-color: #432f01;
-    --text-dark: #a4a2a8;
-    --text-light: #4e4635;
-    --active-text: #987822;
-    --big-text-light: #2b240a;
-    --small-text-dark: #b5aa9b;
-    --footer-light: #e8d9ac;
-    --button-light: #765700;
-    --card-background-color: #353534;
-    --container-color-light: #fdedbf;
-    --container-second-light: #383010;
-}
-
 .shadow {
     position: fixed;
     top: 0;
@@ -38,7 +17,7 @@
 }
 
 .subtitle {
-    color: var(--golden-color);
+    color: #e7c075;
     letter-spacing: 4px;
     font-size: 14px;
     margin-bottom: 20px;
@@ -61,13 +40,13 @@
 }
 
 .header h1 span {
-    color: var(--golden-color);
+    color: #e7c075;
     font-style: italic;
 }
 
 .description {
     max-width: 400px;
-    color: var(--small-text-dark);
+    color: #b5aa9b;
     transition: 0.4s;
     font-size: 18px;
     line-height: 1.6;
@@ -139,7 +118,7 @@
 }
 
 .team-cards .work {
-    color: var(--small-text-dark);
+    color: #b5aa9b;
     transition: 0.4s;
     font-size: 12px;
     letter-spacing: 2px;
@@ -149,14 +128,14 @@
 .team-link {
     display: inline-block;
     margin-top: 15px;
-    color: var(--golden-color);
+    color: #e7c075;
     text-decoration: none;
     font-size: 14px;
     transition: 0.3s;
 }
 
 .team-link:hover {
-    color: var(--golden-hover-color);
+    color: #bb954f;
     letter-spacing: 1px;
 }
 .join-us {
@@ -175,7 +154,7 @@
 }
 
 .box .subtitle {
-    color: var(--golden-color);
+    color: #e7c075;
     letter-spacing: 4px;
     font-size: 13px;
     text-transform: uppercase;
@@ -193,7 +172,7 @@
 }
 
 .description-text {
-    color: var(--small-text-dark);
+    color: #b5aa9b;
     transition: 0.4s;
     font-size: 19px;
     line-height: 1.8;
@@ -201,13 +180,13 @@
     margin: 0 auto 50px;
 }
 .highlight {
-    color: var(--golden-color);
+    color: #e7c075;
     font-weight: bold;
 }
 .join-btn {
     background-color: transparent;
-    border: 1px solid var(--golden-color);
-    color: var(--golden-color);
+    border: 1px solid #e7c075;
+    color: #e7c075;
     padding: 16px 40px;
     font-size: 14px;
     letter-spacing: 2px;
@@ -217,32 +196,32 @@
     transition: all 0.4s ease;
 }
 .join-btn:hover {
-    background-color: var(--golden-color);
+    background-color: #e7c075;
     color: #000000;
     box-shadow: 0 0 15px rgba(231, 192, 117, 0.3);
 }
 
 body.light {
-    background-color: var(--background-light);
+    background-color: #f8f2ea;
 }
 body.light .subtitle{
-    color: var(--active-text);
+    color: #987822;
 }
 body.light .header h1, body.light .team-cards h3, body.light .box h2 {
-    color: var(--big-text-light);
+    color: #2b240a;
 }
 body.light .highlight{
-    color: var(--active-text);
+    color: #987822;
 }
 body.light .description, body.light .description-text, body.light .team-cards .work {
-    color: var(--text-light);
+    color: #4e4635;
 }
 body.light .image-card {
-    background-color: var(--container-color-light);
+    background-color: #fdedbf;
     border-color: rgba(0, 0, 0, 0.1);
 }
 body.light .team-link {
-    color: var(--button-light);
+    color: #765700;
 }
 body.light .shadow {
     background: radial-gradient(circle, transparent 30%, rgba(78, 70, 53, 0.15));
@@ -256,11 +235,11 @@ body.light .team-cards img:hover {
     transform: scale(1.05);
 }
 body.light .join-btn{
-    border: 1px solid var(--button-light) ;
-    color: var(--button-light);
+    border: 1px solid #765700 ;
+    color: #765700;
 }
 
 body.light .footer {
-    background-color: var(--footer-light);
-    color: var(--big-text-light);
+    background-color: #e8d9ac;
+    color: #2b240a;
 }

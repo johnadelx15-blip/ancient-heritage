@@ -1,23 +1,3 @@
-:root {
-    --navBar-colo-dark-dark: #131313e6;
-    --background-dark: #0a0a0a;
-    --golden-color: #e7c075;
-    --golden-hover-color: #bb954f;
-    --golden-btn-text-color: #432f01;
-    --text-dark: #a4a2a8;
-    --active-text: #987822;
-    --small-text-dark: #b5aa9b;
-    --navBar-color-light: rgb(242, 237, 228, 0.8);
-    --background-light: #f2ede4;
-    --button-light: #937C63;
-    --button-hover-light: #7D6852;
-    --footer-light: #f2ede4;
-    --container-color-light: #F9F3E5;
-    --container-second-light: #383010;
-    --text-light: #5d3c24;
-    --big-text-light: #3E2F23;
-}
-
 @font-face {
     font-family: mainFont;
     src: url(../assets/Fonts/noto-serif.regular.ttf);
@@ -47,7 +27,7 @@ body {
 }
 
 .miniTitle {
-    color: var(--golden-color);
+    color: #e7c075;
     font-size: 14px;
     font-family: mainFont;
     letter-spacing: 2px;
@@ -57,7 +37,7 @@ body {
 }
 
 .miniTitle.light {
-    color: var(--text-light);
+    color: #5d3c24;
 }
 
 h1 span {
@@ -66,11 +46,11 @@ h1 span {
 
 h1 span.light {
     color: white;
-    text-shadow: 1px 1px 8px var(--big-text-light);
+    text-shadow: 1px 1px 8px #3E2F23;
 }
 
 h1 {
-    color: var(--golden-color);
+    color: #e7c075;
     font-size: 70px;
     font-family: mainFont;
     font-weight: 500;
@@ -78,21 +58,21 @@ h1 {
 }
 
 h1.light {
-    color: var(--big-text-light);
-    text-shadow: 1px 1px 2px var(--big-text-light);
+    color: #3E2F23;
+    text-shadow: 1px 1px 2px #3E2F23;
 }
 
 .line {
     width: 20%;
-    border-top: 5px solid var(--golden-color);
+    border-top: 5px solid #e7c075;
 }
 
 .line.light {
-    border-top: 5px solid var(--big-text-light);
+    border-top: 5px solid #3E2F23;
 }
 
 .description {
-    color: var(--small-text-dark);
+    color: #b5aa9b;
     font-size: 22px;
     font-family: mainFont;
     padding: 20px 0;
@@ -100,14 +80,14 @@ h1.light {
 }
 
 .description.light {
-    color: var(--text-light);
+    color: #5d3c24;
 }
 
 .left {
     margin: 50px 0;
     display: flex;
     justify-content: center;
-    background-color: var(--navBar-color-dark);
+    background-color: #131313e6;
     padding: 50px 50px;
     width: 40%;
     height: auto;
@@ -115,7 +95,7 @@ h1.light {
 }
 
 .left.light {
-    background-color: var(--navBar-color-light);
+    background-color: rgb(242, 237, 228, 0.8);
 }
 
 .sign-up {
@@ -134,7 +114,7 @@ h1.light {
 
 .form-link a {
     text-decoration: none;
-    color: var(--text-dark);
+    color: #a4a2a8;
     font-size: 16px;
     font-family: mainFont;
     letter-spacing: 2px;
@@ -142,32 +122,32 @@ h1.light {
 }
 
 .form-link .sign.light {
-    color: var(--text-light);
+    color: #5d3c24;
 }
 
 .form-link .sign:hover {
-    color: var(--golden-color);
+    color: #e7c075;
 }
 
 .form-link .sign.light:hover {
-    color: var(--big-text-light);
+    color: #3E2F23;
 }
 
 .form-link .active {
-    border-bottom: 2px solid var(--golden-color);
-    color: var(--golden-color);
+    border-bottom: 2px solid #e7c075;
+    color: #e7c075;
 }
 
 .form-link .active.light {
-    border-bottom: 2px solid var(--big-text-light);
-    color: var(--big-text-light);
+    border-bottom: 2px solid #3E2F23;
+    color: #3E2F23;
 
 }
 
 form div {
     display: flex;
     flex-direction: column;
-    color: var(--small-text-dark);
+    color: #b5aa9b;
     gap: 2px;
 }
 
@@ -175,20 +155,20 @@ div label {
     font-size: 16px;
     font-family: mainFont;
     font-weight: normal;
-    color: var(--small-text-dark);
+    color: #b5aa9b;
     letter-spacing: 2px;
     padding: 5px 0;
 }
 
 div label.light {
-    color: var(--text-light);
+    color: #5d3c24;
 }
 
 div input,
 div select {
     font-size: 16px;
     font-family: mainFont;
-    color: var(--small-text-dark);
+    color: #b5aa9b;
     padding: 5px 10px;
     background-color: rgba(46, 45, 45, 0.4);
     outline: none;
@@ -199,17 +179,17 @@ div select {
 
 div input.light,
 div select.light {
-    background-color: var(--background-light);
+    background-color: #f2ede4;
     color: #674f3e;
 }
 
 div option {
-    background-color: var(--navBar-color-dark);
-    color: var(--text-dark);
+    background-color: #131313e6;
+    color: #a4a2a8;
 }
 
 div option.light {
-    background-color: var(--navBar-color-light);
+    background-color: rgb(242, 237, 228, 0.8);
 }
 
 div option:focus {
@@ -226,11 +206,11 @@ div input.T {
 
 div input:focus,
 div select:focus {
-    border: 0.5px solid var(--golden-color);
+    border: 0.5px solid #e7c075;
 }
 
 div input.light:focus, div select.light:focus {
-    border: 0.5px solid var(--big-text-light);
+    border: 0.5px solid #3E2F23;
 }
 
 .pass {
@@ -243,11 +223,11 @@ div input.light:focus, div select.light:focus {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    color: var(--small-text-dark);
+    color: #b5aa9b;
 }
 
 .pass i.light {
-    color: var(--big-text-light);
+    color: #3E2F23;
 }
 
 .nationality {
@@ -264,8 +244,8 @@ div input.light:focus, div select.light:focus {
 
 button {
     padding: 10px 16px;
-    background-color: var(--golden-color);
-    color: var(--golden-btn-text-color);
+    background-color: #e7c075;
+    color: #432f01;
     font-size: 16px;
     font-family: mainFont;
     width: 100%;
@@ -275,24 +255,24 @@ button {
 }
 
 button.light {
-    background-color: var(--button-light);
+    background-color: #937C63;
     border: none;
     color: #ffffff;
 }
 
 button:hover {
     cursor: pointer;
-    background-color: var(--golden-hover-color);
-    color: var(--golden-btn-text-color);
+    background-color: #bb954f;
+    color: #432f01;
 }
 
 button.light:hover {
-    background-color: var(--button-hover-light);
+    background-color: #7D6852;
     color: white;
 }
 
 .sign-up P {
-    color: var(--text-dark);
+    color: #a4a2a8;
     font-size: 14px;
     font-family: mainFont;
     text-align: center;
@@ -301,7 +281,7 @@ button.light:hover {
 }
 
 .sign-up P.light {
-    color: var(--button-light);
+    color: #937C63;
 }
 
 .sign-up p span {
@@ -310,12 +290,12 @@ button.light:hover {
 }
 
 .Q a {
-    color: var(--golden-color);
+    color: #e7c075;
     text-decoration: none;
-    border-bottom: 1px solid var(--golden-color);
+    border-bottom: 1px solid #e7c075;
 }
 
 .Q a.light {
-    color: var(--big-text-light);
-    border-bottom: 1px solid var(--big-text-light);
+    color: #3E2F23;
+    border-bottom: 1px solid #3E2F23;
 }

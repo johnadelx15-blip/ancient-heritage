@@ -23,7 +23,7 @@ button {
     font-family: 'Times New Roman', Times, serif;
     text-transform: uppercase;
     letter-spacing: 2px;
-    background: linear-gradient(to right, var(--table-border) 0%, var(--golden-color) 50%, var(--container-color-light) 100%);
+    background: linear-gradient(to right, #ffd572 0%, #e7c075 50%, #ffffff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0px 0px 5px rgba(230, 194, 0, 0.4);
@@ -46,35 +46,6 @@ button {
     color: #4e3700;
 }
 
-:root {
-    --black: #000;
-    --navBar-color-dark: #131313e6;
-    --navBar-color-light: #f2ede4cc;
-    --background-dark: #0a0a0a;
-    --golden-color: #e7c075;
-    --golden-hover-color: #bb954f;
-    --golden-btn-text-color: #432f01;
-    --text-dark: #a4a2a8;
-    --active-text: rgb(152, 120, 34);
-    --text-light: #6B4F3A;
-    --big-text-light: #3E2F23;
-    --active-text: #987822;
-    --small-text-dark: #b5aa9b;
-    --table_card_background: #353534;
-    --table-border: #ffd572;
-    --shadow--: 0 15px 35px rgba(0, 0, 0, 0.5);
-    --navBar-color-light: rgb(242, 237, 228, 0.8);
-    --background-light: #f2ede4;
-    --button-light: #937C63;
-    --button-hover-light: #7D6852;
-    --footer-light: #f2ede4;
-    --container-color-light: #ffffff;
-    --container-second-light: #383010;
-    --text-light: #5d3c24;
-    --small-text-light: #a47231;
-    --big-text-light: #3E2F23;
-}
-
 
 .heading {
     display: flex;
@@ -83,7 +54,7 @@ button {
 }
 
 .heading h1 {
-    color: var(--text-dark);
+    color: #a4a2a8;
     margin: 20px;
     padding: 8px;
     width: 100%;
@@ -92,7 +63,7 @@ button {
 }
 
 .heading p {
-    color: var(--golden-color);
+    color: #e7c075;
     margin: 10px;
     margin-bottom: 0px;
     padding: 10px;
@@ -103,7 +74,7 @@ button {
 }
 
 .heading span {
-    color: var(--golden-color);
+    color: #e7c075;
     margin-top: 5px;
     margin-bottom: 25px;
     width: 100%;
@@ -123,7 +94,7 @@ button {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: var(--table_card_background);
+    background-color: #353534;
     border-radius: 20px;
     padding: 10px;
     text-align: center;
@@ -132,7 +103,7 @@ button {
 }
 
 .cards_container span {
-    color: var(--golden-color);
+    color: #e7c075;
     padding: 5px;
     margin: 5px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -307,9 +278,9 @@ video:hover {
 
 .table {
     width: auto;
-    background: var(--table_card_background);
-    border: 1px solid var(--table-border);
-    box-shadow: var(--shadow--);
+    background: #353534;
+    border: 1px solid #ffd572;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     padding: 30px;
     margin: 50px;
     border-radius: 20px;
@@ -321,7 +292,7 @@ video:hover {
     padding: 20px;
     width: 95%;
     height: 95%;
-    color: var(--golden-color);
+    color: #e7c075;
 }
 
 .table-museum tbody tr:hover {
@@ -330,9 +301,9 @@ video:hover {
 }
 
 .table-museum th {
-    color: var(--text-dark);
+    color: #a4a2a8;
     padding: 15px;
-    border-bottom: 2px solid var(--table-border);
+    border-bottom: 2px solid #ffd572;
     font-size: 23px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -367,7 +338,7 @@ video:hover {
     transform: translateY(-5px) scale(1.01);
     background-size: cover;
     background-position: center;
-    box-shadow: var(--shadow--);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(184, 134, 11, 0.8);
     color: #fff !important;
 }
@@ -411,7 +382,7 @@ video:hover {
 
 .footer-d.light {
     background: rgba(254, 232, 182, 0.2);
-    color: var(--text-light);
+    color: #5d3c24;
 
 }
 
@@ -420,7 +391,7 @@ video:hover {
     transform: translateY(-5px) scale(1.01);
     background-size: cover;
     background-position: center;
-    box-shadow: var(--shadow--);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(184, 134, 11, 0.8);
     color: white !important;
     background-color: rgba(35, 35, 35, 0.356);
@@ -434,7 +405,7 @@ video:hover {
 
 .table-museum tfoot td {
     background: rgba(0, 0, 0, 0.2);
-    color: var(--golden-color);
+    color: #e7c075;
 }
 
 
@@ -447,41 +418,41 @@ video:hover {
 
 /* ======================================================================================= */
 .heading h1.light {
-    color: var(--text-light);
+    color: #5d3c24;
 }
 
 .heading p.light {
-    color: var(--small-text-light);
+    color: #a47231;
 }
 
 .heading span.light {
-    color: var(--small-text-light);
+    color: #a47231;
 }
 
 .card-container.light {
-    background-color: var(--container-color-light);
+    background-color: #ffffff;
     box-shadow: 0 0 10px rgb(192 95 0 / 28%);
 }
 
 .cards_container span.light {
-    color: var(--small-text-light);
+    color: #a47231;
 }
 
 button.light {
-    background: linear-gradient(to right, var(--text-light) 0%, var(--small-text-light) 50%, var(--golden-hover-color) 100%);
+    background: linear-gradient(to right, #5d3c24 0%, #a47231 50%, #bb954f 100%);
     text-shadow: 0px 0px 5px rgba(230, 194, 0, 0.4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    border-color: var(--table-border);
+    border-color: #ffd572;
 }
 
 .table.light {
-    background: var(--container-color-light);
-    border: 1px solid var(--table-border);
+    background: #ffffff;
+    border: 1px solid #ffd572;
 }
 
 .table-museum.light {
-    color: var(--small-text-light);
+    color: #a47231;
 }
 
 #poster1.light {
@@ -530,12 +501,12 @@ button.light {
 }
 
 .table-museum tfoot tr:hover #all-m.light {
-    background: linear-gradient(to right, var(--text-light) 0%, var(--small-text-light) 50%, var(--golden-hover-color) 100%);
+    background: linear-gradient(to right, #5d3c24 0%, #a47231 50%, #bb954f 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
 }
 
 .table-museum th.light {
-    color: var(--text-light);
+    color: #5d3c24;
 }

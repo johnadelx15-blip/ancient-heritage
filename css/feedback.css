@@ -1,24 +1,3 @@
-:root {
-    --black: #000;
-    --navBar-color-dark: #131313e6;
-    --navBar-color-light: #fef8efe6;
-    --background-dark: #0a0a0a;
-    --background-light: #f8f2ea;
-    --golden-color: #e7c075;
-    --golden-hover-color: #bb954f;
-    --golden-btn-text-color: #432f01;
-    --text-dark: #a4a2a8;
-    --text-light: #4e4635;
-    --active-text: rgb(152, 120, 34);
-    --active-text: #987822;
-    --big-text-light: #2b240a;
-    --small-text-dark: #b5aa9b;
-    --footer-light: #f2ede4;
-    --button-light: #937C63;
-    --card-background-color: #353534;
-    --container-color-light: #fdedbf;
-    --container-second-light: #383010;
-}
 body{
     cursor: default;
 }
@@ -43,7 +22,7 @@ body{
 }
 
 .miniTitle {
-    color: var(--golden-color);
+    color: #e7c075;
     font-size: 14px;
     font-family: mainFont;
     letter-spacing: 2px;
@@ -51,7 +30,7 @@ body{
 }
 
 .miniTitle.light {
-    color: var(--text-light);
+    color: #4e4635;
 }
 
 h1 span {
@@ -60,11 +39,11 @@ h1 span {
 
 h1 span.light {
     color: white;
-    text-shadow: 1px 1px 8px var(--big-text-light);
+    text-shadow: 1px 1px 8px #2b240a;
 }
 
 h1 {
-    color: var(--golden-color);
+    color: #e7c075;
     font-size: 70px;
     font-family: mainFont;
     font-weight: 500;
@@ -72,21 +51,21 @@ h1 {
 }
 
 h1.light {
-    color: var(--big-text-light);
-    text-shadow: 1px 1px 2px var(--big-text-light);
+    color: #2b240a;
+    text-shadow: 1px 1px 2px #2b240a;
 }
 
 .line {
     width: 20%;
-    border-top: 5px solid var(--golden-color);
+    border-top: 5px solid #e7c075;
 }
 
 .line.light {
-    border-top: 5px solid var(--big-text-light);
+    border-top: 5px solid #2b240a;
 }
 
 .description {
-    color: var(--small-text-dark);
+    color: #b5aa9b;
     font-size: 22px;
     font-family: mainFont;
     padding: 20px 0;
@@ -95,7 +74,7 @@ h1.light {
 }
 
 .description.light {
-    color: var(--text-light);
+    color: #4e4635;
 }
 
 .end {
@@ -118,7 +97,7 @@ a {
 }
 
 .head-contact.light {
-    color: var(--text-light);
+    color: #4e4635;
 }
 
 .main-contact {
@@ -129,7 +108,7 @@ a {
 
 .main-contact.light {
     color: white;
-    text-shadow: 1px 1px 8px var(--big-text-light);
+    text-shadow: 1px 1px 8px #2b240a;
 }
 
 li {
@@ -140,14 +119,14 @@ li {
 }
 
 li.light {
-    border-left: 3px solid var(--big-text-light);
+    border-left: 3px solid #2b240a;
 }
 
 .left {
     margin: 50px 0;
     display: flex;
     justify-content: center;
-    background-color: var(--navBar-color-dark);
+    background-color: #131313e6;
     padding: 50px;
     width: 40%;
     height: auto;
@@ -156,7 +135,7 @@ li.light {
 }
 
 .left.light {
-    background-color: var(--navBar-color-light);
+    background-color: #fef8efe6;
 }
 
 .feed-back {
@@ -168,7 +147,7 @@ li.light {
 form div {
     display: flex;
     flex-direction: column;
-    color: var(--small-text-dark);
+    color: #b5aa9b;
     gap: 2px;
 }
 
@@ -176,20 +155,20 @@ div label {
     font-size: 16px;
     font-family: mainFont;
     font-weight: normal;
-    color: var(--small-text-dark);
+    color: #b5aa9b;
     letter-spacing: 2px;
     padding: 5px 0;
 }
 
 div label.light {
-    color: var(--text-light);
+    color: #4e4635;
 }
 
 div input,
 div textarea {
     font-size: 16px;
     font-family: mainFont;
-    color: var(--text-dark);
+    color: #a4a2a8;
     padding: 5px 10px;
     background-color: rgba(46, 45, 45, 0.4);
     outline: none;
@@ -201,14 +180,14 @@ div textarea {
 div input.light,
 div select.light,
 div textarea.light {
-    background-color: var(--background-light);
+    background-color: #f8f2ea;
     color: #674f3e;
 }
 
 .type {
     font-size: 16px;
     font-family: mainFont;
-    color: var(--text-dark);
+    color: #a4a2a8;
     padding: 5px 10px;
     background-color: rgba(46, 45, 45, 0.4);
     outline: none;
@@ -223,7 +202,7 @@ div option {
 }
 
 div option.light {
-    background-color: var(--navBar-color-light);
+    background-color: #fef8efe6;
 }
 
 div option:focus {
@@ -247,7 +226,7 @@ div input.T {
 div input:focus,
 div textarea:focus,
 div select:focus {
-    border: 0.5px solid var(--golden-color);
+    border: 0.5px solid #e7c075;
 }
 
 .error,
@@ -268,8 +247,8 @@ div select:focus {
 } */
 button {
     padding: 10px 16px;
-    background-color: var(--golden-color);
-    color: var(--golden-btn-text-color);
+    background-color: #e7c075;
+    color: #432f01;
     font-size: 16px;
     font-family: mainFont;
     width: 100%;
@@ -279,23 +258,23 @@ button {
 }
 
 button.light {
-    background-color: var(--button-light);
+    background-color: #937C63;
     border: none;
     color: #ffffff;
 }
 
 button:hover {
     cursor: pointer;
-    background-color: var(--golden-hover-color);
-    color: var(--golden-btn-text-color);
+    background-color: #bb954f;
+    color: #432f01;
 }
 
 button.light:hover {
-    background-color: var(--button-hover-light);
+    background-color: #7D6852;
     color: white;
 }
 .feed-back P{
-    color:var(--text-dark);
+    color:#a4a2a8;
     font-size: 14px;
     font-family: mainFont;
     text-align: center;
@@ -304,5 +283,5 @@ button.light:hover {
 }
 
 .feed-back P.light {
-    color: var(--button-light);
+    color: #937C63;
 }

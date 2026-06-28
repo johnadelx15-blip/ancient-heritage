@@ -1,28 +1,3 @@
-:root {
-    --black: #000;
-    --navBar-color-dark: #131313e6;
-    --navBar-color-light: #f2ede4cc;
-    --background-dark: #0a0a0a;
-    --background-light: #f2ede4;
-    --golden-color: #e7c075;
-    --golden-hover-color: #bb954f;
-    --text-dark: #a4a2a8;
-    --active-text: rgb(152, 120, 34);
-    --text-light: #6B4F3A;
-    --big-text-light: #3E2F23;
-    --active-text: #987822;
-    --small-text-dark: #b5aa9b;
-    --card-background-color: #353534;
-    --container-color-light: #fdedbf;
-    --container-second-light: #383010;
-    --button-light: #937C63;
-    --button-hover-light: #7D6852;
-    --footer-light: #f2ede4;
-    --container-color-light: #F9F3E5;
-    --container-second-light: #383010;
-    --information-cnt: #181818;
-}
-
 @font-face {
     font-family: main-font;
     src: url(../assets/Fonts/noto-serif.regular.ttf);
@@ -81,7 +56,7 @@
     display: flex;
     flex-direction: column;
     transition: 0.4s;
-    background-color: var(--information-cnt);
+    background-color: #181818;
     align-items: center;
     padding: 0 50px;
     padding-top: 20px;

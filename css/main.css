@@ -26,7 +26,7 @@
     font-style: italic;
 }
 
-html {
+html, body {
     scroll-behavior: smooth;
     scrollbar-gutter: stable;
 }
@@ -40,6 +40,10 @@ html {
 ::selection {
     background-color: #c59f59c5;
     color: #4e3700;
+}
+
+main {
+    flex: 1;
 }
 
 body {
