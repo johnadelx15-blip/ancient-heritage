@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="../css/all.min.css">
     <script src="https://kit.fontawesome.com/728f1f9039.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div id="nav-bar">
         <nav>
@@ -35,160 +37,249 @@
         </nav>
     </div>
     <main>
-        <section id="museum-cards">
-            <div class="heading">
-                <h1>Egyptian Heritage Halls</h1>
-                <p><strong style="font-weight: 100;">Egyptian Heritage Halls</strong> is a curated journey through
-                    millennia of Egyptian
-                    civilization, spanning from the Pharaonic glory to the Coptic and Islamic eras.</p>
-                <span> It offers visitors a rare glimpse into the artifacts, traditions, and architectural wonders that
-                    define Egypt's timeless legacy.</span>
+        <div id="heading">
+            <span>A Curated Odyssey</span>
+            <h1>Egyptian Heritage Halls</h1>
+            <p>A curated journey through millennia of Egyptian civilization, spanning from the Pharaonic glory to the
+                Coptic and Islamic eras. It offers visitors a rare glimpse into the artifacts, traditions, and
+                architectural wonders that define Egypt's timeless legacy.</p>
+        </div>
+        <div id="cards-container">
+            <div id="title">
+                <section>
+                    <h2>The Great Institutions</h2>
+                    <p>Custodians of global human history</p>
+                </section>
+                <div></div>
             </div>
-            <div class="cards_container">
+            <div id="cards">
+                <section id="grid-container">
+                    <div id="grand" class="play" onclick="play(this.id,event)">
+                        <video muted loop preload playsinline src="../assets/videos/Grand Egyptian Museum.mp4" controlsList="nodownload" no-download></video>
+                        <div class="card-title">
+                            <svg viewBox="0 0 36 36" onclick="toggleIcon()">
+                                <path id="path" d="M 12.75 4.5 L 9.75 4.5 C 9.15 4.5 8.58 4.73 8.15 5.15 C 7.73
+                                    5.58 7.5 6.15 7.5 6.75 L 7.5 29.25 C 7.5 29.84 7.73 30.41 8.15 30.84 C 8.58 31.26
+                                    9.15 31.5 9.75 31.5 L 12.75 31.5 C 13.34 31.5 13.91 31.26 14.34 30.84 C 14.76 30.41
+                                    15 29.84 15 29.25 L 15 6.75 C 15 6.15 14.76 5.58 14.34 5.15 C 13.91 4.73 13.34 4.5
+                                    12.75 4.5 Z M 26.25 4.5 L 23.25 4.5 C 22.65 4.5 22.08 4.73 21.65 5.15 C 21.23 5.58
+                                    21 6.15 21 6.75 V 29.25 C 21 29.84 21.23 30.41 21.65 30.84 C 22.08 31.26 22.65 31.5
+                                    23.25 31.5 L 26.25 31.5 C 26.84 31.5 27.41 31.26 27.84 30.84 C 28.26 30.41 28.5
+                                    29.84 28.5 29.25 V 6.75 L 28.5 6.75 C 28.5 6.15 28.26 5.58 27.84 5.15 C 27.41 4.73
+                                    26.84 4.5 26.25 4.5 Z">
+                                </path>
+                            </svg>
+                            <h3>Grand Egyptian Museum</h3>
+                            <span>Giza Plateau</span>
+                            <a target="_blank" href="https://gem.eg/">Details</a>
+                            <p>The world's largest archaeological museum dedicated to a single civilization. Located on
+                                the Giza plateau, it houses over 100,000 artifacts including the complete Tutankhamun
+                                collection.</p>
+                        </div>
+                    </div>
 
-                <div class="card-container">
-                    <div class="video-wrapper">
-                        <img id="poster1" class="static-poster"
-                            src="../assets/images/ChatGPT Image 3 مايو 2026، 11_09_40 ص.png" alt="Coptic Museum">
-                        <video muted loop preload="none" id="card1"
-                            src="../assets/videos/The Coptic Museum _ Coptic Cairo _ Egypt _ Things To Do In Egypt _ Visit Egypt _ Egypt Travel Guide(720P_HD) (online-video-cutter.com).mp4"></video>
+                    <div id="coptic" onclick="play(this.id,event)">
+                        <video muted loop preload="auto" playsinline
+                            src="../assets/videos/The Coptic Museum.mp4" controlsList="nodownload" no-download></video>
+                        <div class="card-title">
+                            <svg viewBox="0 0 36 36" onclick="toggleIcon()">
+                                <path id="path" d="M 12.75 4.5 L 9.75 4.5 C 9.15 4.5 8.58 4.73 8.15 5.15 C 7.73
+                                    5.58 7.5 6.15 7.5 6.75 L 7.5 29.25 C 7.5 29.84 7.73 30.41 8.15 30.84 C 8.58 31.26
+                                    9.15 31.5 9.75 31.5 L 12.75 31.5 C 13.34 31.5 13.91 31.26 14.34 30.84 C 14.76 30.41
+                                    15 29.84 15 29.25 L 15 6.75 C 15 6.15 14.76 5.58 14.34 5.15 C 13.91 4.73 13.34 4.5
+                                    12.75 4.5 Z M 26.25 4.5 L 23.25 4.5 C 22.65 4.5 22.08 4.73 21.65 5.15 C 21.23 5.58
+                                    21 6.15 21 6.75 V 29.25 C 21 29.84 21.23 30.41 21.65 30.84 C 22.08 31.26 22.65 31.5
+                                    23.25 31.5 L 26.25 31.5 C 26.84 31.5 27.41 31.26 27.84 30.84 C 28.26 30.41 28.5
+                                    29.84 28.5 29.25 V 6.75 L 28.5 6.75 C 28.5 6.15 28.26 5.58 27.84 5.15 C 27.41 4.73
+                                    26.84 4.5 26.25 4.5 Z">
+                                </path>
+                            </svg>
+                            <h3>The Coptic Museum</h3>
+                            <span>Coptic Cairo, Old Cairo</span>
+                            <a target="_blank"
+                                href="https://egymonuments.gov.eg/en/museums/the-coptic-museum">Details</a>
+                            <p>Founded in 1908 in Old Cairo, it houses the largest collection of Coptic Christian
+                                artifacts in the world, tracing the era's unique fusion of cultures.</p>
+                        </div>
                     </div>
-                    <span class="museum-n">The Coptic Museum</span>
-                    <button class="museum-info"><a target="_blank"
-                            href="https://mota.gov.eg/ar/%D8%A7%D9%84%D8%A2%D8%AB%D8%A7%D8%B1-%D9%88%D8%A7%D9%84%D9%85%D8%AA%D8%A7%D8%AD%D9%81/%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%B3-%D8%A7%D9%84%D8%A3%D8%B9%D9%84%D9%89-%D9%84%D9%84%D8%A2%D8%AB%D8%A7%D8%B1/%D8%AF%D9%84%D9%8A%D9%84-%D9%85%D8%AA%D8%A7%D8%AD%D9%81-%D8%A7%D9%84%D8%A2%D8%AB%D8%A7%D8%B1-%D8%A7%D9%84%D9%85%D9%81%D8%AA%D9%88%D8%AD%D8%A9-%D9%84%D9%84%D8%B2%D9%8A%D8%A7%D8%B1%D8%A9-%D8%AC%D8%AF%D9%8A%D8%AF/%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D9%81-%D8%A7%D9%84%D9%82%D8%A8%D8%B7%D9%8A/">Interested?</a></button>
-                </div>
-                <div class="card-container c2">
-                    <div class="video-wrapper">
-                        <img id="poster2" class="static-poster"
-                            src="../assets/images/ChatGPT Image 3 مايو 2026، 11_35_49 ص.png" alt="Egyptian Museum">
-                        <video muted loop preload="none" id="card2"
-                            src="../assets/videos/ملخص زيارة المتحف المصرى بميدان التحرير فى 158 ثانيه(720P_HD) (online-video-cutter.com).mp4"></video>
-                    </div>
-                    <span class="museum-n">Egyptian Museum</span>
-                    <button class="museum-info"><a target="_blank"
-                            href="https://mota.gov.eg/ar/%D8%A7%D9%84%D8%A2%D8%AB%D8%A7%D8%B1-%D9%88%D8%A7%D9%84%D9%85%D8%AA%D8%A7%D8%AD%D9%81/%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%B3-%D8%A7%D9%84%D8%A3%D8%B9%D9%84%D9%89-%D9%84%D9%84%D8%A2%D8%AB%D8%A7%D8%B1/%D8%AF%D9%84%D9%8A%D9%84-%D9%85%D8%AA%D8%A7%D8%AD%D9%81-%D8%A7%D9%84%D8%A2%D8%AB%D8%A7%D8%B1-%D8%A7%D9%84%D9%85%D9%81%D8%AA%D9%88%D8%AD%D8%A9-%D9%84%D9%84%D8%B2%D9%8A%D8%A7%D8%B1%D8%A9-%D8%AC%D8%AF%D9%8A%D8%AF/%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D9%81-%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A-%D8%A8%D8%A7%D9%84%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1/">Interested?</a></button>
-                </div>
-                <div class="card-container">
-                    <div class="video-wrapper">
-                        <img id="poster3" class="static-poster"
-                            src="../assets/images/ChatGPT Image 3 مايو 2026، 11_58_25 ص.png"
-                            alt="Grand Egyptian Museum">
-                        <video muted loop preload="none" id="card3"
-                            src="../assets/videos/Grand Egyptian Museum - Stunning Cinematic Views(1080P_60FPS) (online-video-cutter.com).mp4"></video>
-                    </div>
-                    <span class="museum-n">Grand Egyptian Museum</span>
-                    <button class="museum-info"><a target="_blank"
-                            href="https://share.google/PNPDUHTbf5hbhT5q4">Interested?</a></button>
-                </div>
 
-                <div class="card-container c4">
-                    <div class="video-wrapper">
-                        <img id="poster4" class="static-poster"
-                            src="../assets/images/ChatGPT Image 3 مايو 2026، 11_32_53 ص.png" alt="Islamic Art Museum">
-                        <video muted loop preload="none" id="card4"
-                            src="../assets/videos/Islamic Art Museum_ Cairo_ Artifacts from the Islamic World(720P_HD) (online-video-cutter.com).mp4"></video>
+                    <div id="egyptian" onclick="play(this.id,event)">
+                        <video muted loop preload playsinline src="../assets/videos/Egyptian Museum.mp4" controlsList="nodownload" no-download></video>
+                        <div class="card-title">
+                            <svg viewBox="0 0 36 36" onclick="toggleIcon()">
+                                <path id="path" d="M 12.75 4.5 L 9.75 4.5 C 9.15 4.5 8.58 4.73 8.15 5.15 C 7.73
+                                    5.58 7.5 6.15 7.5 6.75 L 7.5 29.25 C 7.5 29.84 7.73 30.41 8.15 30.84 C 8.58 31.26
+                                    9.15 31.5 9.75 31.5 L 12.75 31.5 C 13.34 31.5 13.91 31.26 14.34 30.84 C 14.76 30.41
+                                    15 29.84 15 29.25 L 15 6.75 C 15 6.15 14.76 5.58 14.34 5.15 C 13.91 4.73 13.34 4.5
+                                    12.75 4.5 Z M 26.25 4.5 L 23.25 4.5 C 22.65 4.5 22.08 4.73 21.65 5.15 C 21.23 5.58
+                                    21 6.15 21 6.75 V 29.25 C 21 29.84 21.23 30.41 21.65 30.84 C 22.08 31.26 22.65 31.5
+                                    23.25 31.5 L 26.25 31.5 C 26.84 31.5 27.41 31.26 27.84 30.84 C 28.26 30.41 28.5
+                                    29.84 28.5 29.25 V 6.75 L 28.5 6.75 C 28.5 6.15 28.26 5.58 27.84 5.15 C 27.41 4.73
+                                    26.84 4.5 26.25 4.5 Z">
+                                </path>
+                            </svg>
+                            <h3>Egyptian Museum</h3>
+                            <span>Tahrir Square, Cairo</span>
+                            <a target="_blank" href="https://egymonuments.gov.eg/en/museums/egyptian-museum">Details</a>
+                            <p>Established in 1902, this landmark in Tahrir Square remains the central archive of
+                                Pharaonic history, housing the iconic Tanis treasure.</p>
+                        </div>
                     </div>
-                    <span class="museum-n">Islamic Art Museum</span>
-                    <button class="museum-info"><a target="_blank"
-                            href="https://share.google/7ZVFeUs3DqeMDDveM">Interested?</a></button>
-                </div>
 
-                <div class="card-container c5">
-                    <div class="video-wrapper">
-                        <img id="poster5" class="static-poster"
-                            src="../assets/images/ChatGPT Image 3 مايو 2026، 11_02_17 ص.png"
-                            alt="National Museum of Egyptian Civilization">
-                        <video muted loop preload="none" id="card5"
-                            src="../assets/videos/The National Museum Of Egyptian Civilization - Museums Of Egypt(720P 60Fps) (Online-Video-Cutter.Com).mp4"></video>
+                    <div id="islamic" onclick="play(this.id,event)">
+                        <video muted loop preload playsinline src="../assets/videos/Islamic Art Museum.mp4" controlsList="nodownload" no-download></video>
+                        <div class="card-title">
+                            <svg viewBox="0 0 36 36" onclick="toggleIcon()">
+                                <path id="path" d="M 12.75 4.5 L 9.75 4.5 C 9.15 4.5 8.58 4.73 8.15 5.15 C 7.73
+                                    5.58 7.5 6.15 7.5 6.75 L 7.5 29.25 C 7.5 29.84 7.73 30.41 8.15 30.84 C 8.58 31.26
+                                    9.15 31.5 9.75 31.5 L 12.75 31.5 C 13.34 31.5 13.91 31.26 14.34 30.84 C 14.76 30.41
+                                    15 29.84 15 29.25 L 15 6.75 C 15 6.15 14.76 5.58 14.34 5.15 C 13.91 4.73 13.34 4.5
+                                    12.75 4.5 Z M 26.25 4.5 L 23.25 4.5 C 22.65 4.5 22.08 4.73 21.65 5.15 C 21.23 5.58
+                                    21 6.15 21 6.75 V 29.25 C 21 29.84 21.23 30.41 21.65 30.84 C 22.08 31.26 22.65 31.5
+                                    23.25 31.5 L 26.25 31.5 C 26.84 31.5 27.41 31.26 27.84 30.84 C 28.26 30.41 28.5
+                                    29.84 28.5 29.25 V 6.75 L 28.5 6.75 C 28.5 6.15 28.26 5.58 27.84 5.15 C 27.41 4.73
+                                    26.84 4.5 26.25 4.5 Z">
+                                </path>
+                            </svg>
+                            <h3>Islamic Art Museum</h3>
+                            <span>Bab Al-Khalq, Cairo</span>
+                            <a target="_blank"
+                                href="https://egymonuments.gov.eg/en/museums/museum-of-islamic-art">Details</a>
+                            <p>A global masterpiece housing one of the most comprehensive collections of Islamic
+                                artifacts, spanning wood carving, textiles, and ceramics.</p>
+                        </div>
                     </div>
-                    <span class="museum-n">The National Museum of Egyptian Civilization</span>
-                    <button class="museum-info"><a target="_blank"
-                            href="https://mota.gov.eg/ar/%D8%A7%D9%84%D8%A2%D8%AB%D8%A7%D8%B1-%D9%88%D8%A7%D9%84%D9%85%D8%AA%D8%A7%D8%AD%D9%81/%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%B3-%D8%A7%D9%84%D8%A3%D8%B9%D9%84%D9%89-%D9%84%D9%84%D8%A2%D8%AB%D8%A7%D8%B1/%D8%AF%D9%84%D9%8A%D9%84-%D9%85%D8%AA%D8%A7%D8%AD%D9%81-%D8%A7%D9%84%D8%A2%D8%AB%D8%A7%D8%B1-%D8%A7%D9%84%D9%85%D9%81%D8%AA%D9%88%D8%AD%D8%A9-%D9%84%D9%84%D8%B2%D9%8A%D8%A7%D8%B1%D8%A9-%D8%AC%D8%AF%D9%8A%D8%AF/%D8%A7%D9%84%D9%82%D9%88%D9%85%D9%8A-%D9%84%D9%84%D8%AD%D8%B6%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A%D8%A9/">Interested?</a></button>
-                </div>
 
+                    <div id="national" onclick="play(this.id,event)">
+                        <video muted loop preload playsinline src="../assets/videos/The National Museum.mp4" controlsList="nodownload" no-download></video>
+                        <div class="card-title">
+                            <svg viewBox="0 0 36 36" onclick="toggleIcon()">
+                                <path id="path" d="M 12.75 4.5 L 9.75 4.5 C 9.15 4.5 8.58 4.73 8.15 5.15 C 7.73
+                                    5.58 7.5 6.15 7.5 6.75 L 7.5 29.25 C 7.5 29.84 7.73 30.41 8.15 30.84 C 8.58 31.26
+                                    9.15 31.5 9.75 31.5 L 12.75 31.5 C 13.34 31.5 13.91 31.26 14.34 30.84 C 14.76 30.41
+                                    15 29.84 15 29.25 L 15 6.75 C 15 6.15 14.76 5.58 14.34 5.15 C 13.91 4.73 13.34 4.5
+                                    12.75 4.5 Z M 26.25 4.5 L 23.25 4.5 C 22.65 4.5 22.08 4.73 21.65 5.15 C 21.23 5.58
+                                    21 6.15 21 6.75 V 29.25 C 21 29.84 21.23 30.41 21.65 30.84 C 22.08 31.26 22.65 31.5
+                                    23.25 31.5 L 26.25 31.5 C 26.84 31.5 27.41 31.26 27.84 30.84 C 28.26 30.41 28.5
+                                    29.84 28.5 29.25 V 6.75 L 28.5 6.75 C 28.5 6.15 28.26 5.58 27.84 5.15 C 27.41 4.73
+                                    26.84 4.5 26.25 4.5 Z">
+                                </path>
+                            </svg>
+                            <h3>NMEC</h3>
+                            <span>Ain Al-Sira, Cairo</span>
+                            <a target="_blank"
+                                href="https://egymonuments.gov.eg/en/museums/national-museum-of-egyptian-civilization-nmec">Details</a>
+                            <p>The National Museum of Egyptian Civilization is a modern architectural marvel in Fustat,
+                                famously housing the Royal Mummies.</p>
+                        </div>
+                    </div>
+
+                </section>
             </div>
-        </section>
-        <section id="table-info">
-            <div class="table-container">
-                <div class="table">
-                    <table class="table-museum">
-                        <thead>
-                            <tr>
-                                <th>MUSEUM NAME</th>
-                                <th>LOCATION</th>
-                                <th>STANDARD TICKET</th>
-                                <th>STUDENT TICKET</th>
-                                <th>OPINING HOURS</th>
-                                <th>STATUS</th>
-                                <th>PROCEDURES</th>
 
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr id="row1">
-                                <td>Grand Egyptian Museum</td>
-                                <td>Giza Pyramids</td>
-                                <td>1200EGP</td>
-                                <td>600 EGP</td>
-                                <td>09:00 - 17:00</td>
-                                <td>Open</td>
-                                <td>Online Booking</td>
-                            </tr>
-                            <tr id="row2">
-                                <td>Egyptian Museum</td>
-                                <td>Tahrir Square</td>
-                                <td>450 EGP</td>
-                                <td>230 EGP</td>
-                                <td>09:00 - 19:00</td>
-                                <td>Open</td>
-                                <td>No Flash Photo</td>
-                            </tr>
-
-                            <tr id="row3">
-                                <td>Islamic Art Museum</td>
-                                <td>Bab Al-Khalq</td>
-                                <td>270 EGP</td>
-                                <td>140 EGP</td>
-                                <td>09:00 - 17:00</td>
-                                <td>Open</td>
-                                <td>Guided Tours</td>
-                            </tr>
-
-                            <tr id="row4">
-                                <td>The Coptic Museum</td>
-                                <td>Old Cairo</td>
-                                <td>230 EGP</td>
-                                <td>120 EGP</td>
-                                <td>09:00 - 16:00</td>
-                                <td>Open</td>
-                                <td>Silent Mode</td>
-                            </tr>
-
-                            <tr id="row5">
-                                <td>The National Museum of Egyptian Civilization</td>
-                                <td>Fustat</td>
-                                <td>500 EGP</td>
-                                <td>250 EGP</td>
-                                <td>09:00 - 20:00</td>
-                                <td>Open</td>
-                                <td>ID Required</td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <div id="t_footer">
-                                <tr id="footer-r">
-                                    <td class="footer-d" colspan="2"> The total number of museums shown so far is</td>
-                                    <td class="footer-d" colspan="2" style="text-align: center;">5</td>
-                                    <td class="footer-d" colspan="3" style="text-align: center;"><button><a
-                                                target="_blank" href="https://egymonuments.gov.eg/ar/museums/"
-                                                id="all-m"> All museums</a></button></td>
-                                </tr>
-                            </div>
-                        </tfoot>
-                    </table>
-                </div>
+        </div>
+        <div id="table-container">
+            <div>
+                <span>Curation & Logistics</span>
+                <h2>Comparative Guide</h2>
             </div>
-        </section>
+            <table>
+                <thead>
+                    <tr>
+                        <th rowspan="2">MUSEUM NAME</th>
+                        <th rowspan="2">LOCATION</th>
+                        <th colspan="2">Egyptian (EGP)</th>
+                        <th colspan="2">Foreign (EGP)</th>
+                        <th rowspan="2">OPINING HOURS</th>
+                        <th rowspan="2">STATE</th>
+                        <th rowspan="2">PROCEDURES</th>
+                    </tr>
+                    <tr>
+                        <th>Standard</th>
+                        <th>Student</th>
+                        <th>Standard</th>
+                        <th>Student</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Grand Egyptian Museum</td>
+                        <td>Giza Pyramids</td>
+                        <td>200EGP</td>
+                        <td>100EGP</td>
+                        <td>1500EGP</td>
+                        <td>750EGP</td>
+                        <td>09:00 - 18:00</td>
+                        <td>
+                            <div class="state grand"></div>
+                        </td>
+                        <td>Online Booking</td>
+                    </tr>
+                    <tr>
+                        <td>Egyptian Museum</td>
+                        <td>Tahrir Square</td>
+                        <td>30EGP</td>
+                        <td>10EGP</td>
+                        <td>550EGP</td>
+                        <td>275EGP</td>
+                        <td>09:00 - 17:00</td>
+                        <td>
+                            <div class="state"></div>
+                        </td>
+                        <td>No Flash Photo</td>
+                    </tr>
+
+                    <tr>
+                        <td>Islamic Art Museum</td>
+                        <td>Bab Al-Khalq</td>
+                        <td>20EGP</td>
+                        <td>10EGP</td>
+                        <td>340EGP</td>
+                        <td>170EGP</td>
+                        <td>09:00 - 17:00</td>
+                        <td>
+                            <div class="state"></div>
+                        </td>
+                        <td>Guided Tours</td>
+                    </tr>
+
+                    <tr>
+                        <td>The Coptic Museum</td>
+                        <td>Old Cairo</td>
+                        <td>20EGP</td>
+                        <td>10EGP</td>
+                        <td>280EGP</td>
+                        <td>140EGP</td>
+                        <td>09:00 - 17:00</td>
+                        <td>
+                            <div class="state"></div>
+                        </td>
+                        <td>Silent Mode</td>
+                    </tr>
+
+                    <tr>
+                        <td>NMEC</td>
+                        <td>Fustat</td>
+                        <td>90EGP</td>
+                        <td>45EGP</td>
+                        <td>550EGP</td>
+                        <td>300EGP</td>
+                        <td>09:00 - 17:00</td>
+                        <td>
+                            <div class="state"></div>
+                        </td>
+                        <td>ID Required</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="6"> The total number of museums shown so far is 5</td>
+                        <td colspan="3"><a target="_blank" href="https://egymonuments.gov.eg/en/museums"> More
+                                museums</a></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
     </main>
     <footer id="footer">
         <div id="copy-right">
@@ -207,29 +298,6 @@
     </footer>
     <script src="../js/main.js"></script>
     <script src="../js/museums.js"></script>
-    <script>
-        const videoWrappers = document.querySelectorAll('.video-wrapper');
-
-        videoWrappers.forEach(wrapper => {
-            const video = wrapper.querySelector('video');
-
-            video.playbackRate = 1.0;
-            if (video.id === 'card1') video.playbackRate = 1.85;
-            if (video.id === 'card2') video.playbackRate = 1.2;
-            if (video.id === 'card3') video.playbackRate = 1.45;
-            if (video.id === 'card4') video.playbackRate = 1.2;
-            if (video.id === 'card5') video.playbackRate = 2.5;
-
-            wrapper.addEventListener('mouseenter', () => {
-                video.play();
-            });
-
-            wrapper.addEventListener('mouseleave', () => {
-                video.pause();
-                video.currentTime = 0;
-            });
-        });
-    </script>
 </body>
 
 </html>

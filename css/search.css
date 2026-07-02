@@ -52,6 +52,23 @@ input.light::placeholder {
     border: 1px solid white;
 }
 
+.search-window input:-webkit-autofill,
+.search-window input:-webkit-autofill:hover, 
+.search-window input:-webkit-autofill:focus, 
+.search-window input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: white !important;
+    font-size: 16px !important;
+    font-family: inherit !important;
+}
+
+.search-window input.light:-webkit-autofill,
+.search-window input.light:-webkit-autofill:hover, 
+.search-window input.light:-webkit-autofill:focus, 
+.search-window input.light:-webkit-autofill:active {
+    -webkit-text-fill-color: #0a0a0a !important;
+}
+
 .search-window button {
     width: 8%;
     background-color: #e7c075;

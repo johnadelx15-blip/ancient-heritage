@@ -1,512 +1,395 @@
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden;
-    background-color: #0a0a0a;
-    background-image:
-        radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.09) 0%, transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.09) 0%, transparent 40%);
-
-}
-
 a {
     text-decoration: none;
 }
 
-button {
-    margin: 5px;
-    height: 40px;
-    border-radius: 30px;
-    width: 185px;
-    font-size: 14px;
-    font-family: 'Times New Roman', Times, serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background: linear-gradient(to right, #ffd572 0%, #e7c075 50%, #ffffff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0px 0px 5px rgba(230, 194, 0, 0.4);
-    transition: all 0.4s ease;
-}
-
-@font-face {
-    font-family: mainFont;
-    src: url(../assets/Fonts/noto-serif.regular.ttf);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box
-}
-
-::selection {
-    background-color: #c59f59c5;
-    color: #4e3700;
-}
-
-
-.heading {
+#heading {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-}
-
-.heading h1 {
-    color: #a4a2a8;
-    margin: 20px;
-    padding: 8px;
-    width: 100%;
+    align-items: center;
     text-align: center;
-    transition: 0.4s;
+    gap: 30px;
+    margin-top: 30px;
+
+    span {
+        background-color: #ffe9b00d;
+        border: 1px solid #ffe9b033;
+        color: #ffe9b0;
+        border-radius: 50px;
+        padding: 10px 16px;
+        font-size: 12px;
+        font-weight: 600;
+        font-family: 'Montserrat';
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    h1 {
+        font-size: 84px;
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        color: #E5E2E1;
+    }
+
+    p {
+        width: 55%;
+        color: #d0c5af;
+        font-family: 'Montserrat';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+    }
 }
 
-.heading p {
-    color: #e7c075;
-    margin: 10px;
-    margin-bottom: 0px;
-    padding: 10px;
+#cards-container {
+    padding: 0 150px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+
+    #title {
+        display: flex;
+        justify-content: end;
+        align-items: end;
+
+        h2 {
+            color: #ffe9b0;
+            font-family: 'Playfair Display';
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #d0c5af99;
+            font-family: 'Montserrat';
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+        div {
+            background-color: #d4af3726;
+            height: 1px;
+            flex: 1;
+            margin: 0 48px;
+        }
+    }
+}
+
+#cards {
+    margin-top: 50px;
     width: 100%;
-    text-align: center;
-    transition: 0.4s;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
-.heading span {
-    color: #e7c075;
-    margin-top: 5px;
-    margin-bottom: 25px;
-    width: 100%;
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-}
-
-.cards_container {
+#grid-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 30px;
-    max-width: 1250px;
-    margin: 20px auto;
+    width: 100%;
+    grid-auto-flow: dense;
 }
 
-.card-container {
+#grid-container>div {
+    position: relative;
+    display: flex;
+    grid-column: span 2;
+    flex-direction: column;
+    background-color: #181717;
+    padding: 20px;
+    gap: 10px;
+    border-radius: 15px;
+    border: 1px solid #d4af3726;
+    height: 370px;
+    overflow: hidden;
+    grid-column: span 2;
+    transition: 0.6s;
+
+    video {
+        width: 100%;
+        border-radius: 10px;
+        transition: 0.6s;
+    }
+
+    .card-title {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        flex: 1;
+        z-index: 2;
+        transition: 0.3s;
+        overflow: hidden;
+
+        h3 {
+            position: absolute;
+            top: 10px;
+            color: #E5E2E1;
+            font-family: 'Playfair Display';
+            font-weight: 500;
+            font-size: 28px;
+            transition: 0.6s;
+            white-space: nowrap;
+        }
+
+        p {
+            overflow: hidden;
+            color: #d0c5af;
+            font-family: 'Montserrat';
+            font-size: 16px;
+            line-height: 26px;
+            position: absolute;
+            margin-top: 15px;
+            top: 150px;
+        }
+
+        span {
+            color: #d0c5af;
+            font-family: 'Montserrat';
+            font-size: 16px;
+            transition: 0.6s;
+        }
+
+        a {
+            width: fit-content;
+            color: #ffe9b0;
+            font-family: 'Montserrat';
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 1px solid #ffe9b04d;
+            padding-bottom: 4px;
+            margin-top: 10px;
+            transition: 0.6s;
+        }
+
+        svg {
+            position: absolute;
+            top: 0;
+            right: -20px;
+            fill: #ffe9b0;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+
+            #path {
+                transition: d 0.25s cubic-bezier(0, 0, 0.2, 1);
+            }
+
+            #path.paused {
+                d: path("M 17 8.6 L 10.89 4.99 C 9.39 4.11 7.5 5.19 7.5 6.93 C 7.5 6.93 7.5 6.93 7.5 6.93 L 7.5 29.06 C 7.5 30.8 9.39 31.88 10.89 31 C 10.89 31 10.89 31 10.89 31 L 17 27.4 C 17 27.4 17 27.4 17 27.4 C 17 27.4 17 27.4 17 27.4 L 17 8.6 C 17 8.6 17 8.6 17 8.6 C 17 8.6 17 8.6 17 8.6 Z M 17 8.6 L 17 8.6 C 17 8.6 17 8.6 17 8.6 C 17 8.6 17 8.6 17 8.6 V 27.4 C 17 27.4 17 27.4 17 27.4 C 17 27.4 17 27.4 17 27.4 L 33 18 C 33 18 33 18 33 18 C 33 18 33 18 33 18 V 18 L 17 8.6 C 17 8.6 17 8.6 17 8.6 C 17 8.6 17 8.6 17 8.6 Z");
+            }
+        }
+    }
+}
+
+#grid-container>div.play {
+    grid-column: span 4;
+    border-color: #d4af374d;
+    padding: 30px;
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+        filter: brightness(40%);
+        z-index: 1;
+    }
+
+    h3 {
+        position: relative;
+        top: 0;
+        font-size: 40px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    span {
+        color: #ffe9b0;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    a {
+        background-color: #ffe9b0;
+        color: #3d2f00;
+        border-radius: 50px;
+        padding: 12px 32px;
+        border-bottom: none;
+    }
+
+    p {
+        width: 90%;
+        position: relative;
+        top: 0;
+        transition: 0.6s;
+    }
+
+    .card-title {
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: normal;
+
+        svg {
+            right: 0;
+            transition: 0.6s;
+        }
+    }
+}
+
+#grid-container>div:not(.play) {
+    cursor: pointer;
+}
+
+#grid-container>div:not(.play):hover {
+    background-color: #1B1B1B;
+    border-color: #d4af374d;
+}
+
+#table-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    background-color: #353534;
-    border-radius: 20px;
-    padding: 10px;
-    text-align: center;
     justify-content: center;
     align-items: center;
-}
-
-.cards_container span {
-    color: #e7c075;
-    padding: 5px;
-    margin: 5px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.card-container:nth-child(1) {
-    grid-column: 1 / 5;
-}
-
-.card-container:nth-child(2) {
-    grid-column: 5 / 7;
-}
-
-.card-container:nth-child(3) {
-    grid-column: 1 / 7;
-}
-
-
-.card-container:nth-child(4) {
-    grid-column: 1 / 3;
-}
-
-.card-container:nth-child(5) {
-    grid-column: 3 / 7;
-}
-
-video {
-    transition: transform 0.3s ease, filter 0.3s ease;
-    filter: grayscale(40%);
-    cursor: pointer;
-    width: 100%;
-    height: 385px;
-    object-fit: cover;
-    display: block;
-    border-radius: 20px;
-    margin: 10px;
-    opacity: 0;
-    transition: opacity 0.4s ease, transform 0.3s ease, filter 0.3s ease;
-    background-color: transparent;
-}
-
-video:hover {
-    opacity: 1;
-    transform: scale(1.02);
-    filter: grayscale(0%);
-}
-
-/* ====================================================================== */
-
-.video-wrapper {
-    position: relative;
-    width: 100%;
-    height: 385px;
-    overflow: hidden;
-    border-radius: 20px;
-    cursor: pointer;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-.video-wrapper img.static-poster {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    display: block;
-}
-
-.video-wrapper video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: -8px;
-    left: -8px;
-    z-index: 2;
-    opacity: 0;
-    filter: grayscale(40%);
-    transition: opacity 0.4s ease, filter 0.3s ease;
-}
-
-
-.video-wrapper:hover video {
-    opacity: 1;
-    filter: grayscale(0%);
-}
-
-.video-wrapper:hover {
-    transform: scale(1.02);
-}
-
-/* ======================================================================= */
-.video-wrapper #card1 {
-    top: -7px;
-    left: -2px;
-}
-
-.video-wrapper img#poster3 {
-    border-radius: 34px;
-    width: 99%;
-    top: 0px;
-    left: 7px;
-}
-
-.video-wrapper img#poster5 {
-    border-radius: 20px;
-    width: 99%;
-    top: 0px;
-    left: 4px;
-}
-
-.video-wrapper #card3 {
-    top: -7px;
-    left: 9px;
-}
-
-.video-wrapper #card4 {
-    top: -7px;
-    left: -7px;
-}
-
-.video-wrapper #card5 {
-    top: -8px;
-    left: 2px;
-}
-
-/* ======================================================================== */
-
-#card1 {
-    width: 99%;
-}
-
-#card2 {
-    width: 99%
-}
-
-#card3 {
-    width: 97%;
-}
-
-#card4 {
-    width: 99%;
-}
-
-#card5 {
-    width: 97%;
-}
-
-video:hover {
-    transform: scale(1.02);
-    filter: grayscale(0%);
-}
-
-.museum-n {
-    font-size: 25px;
-}
-
-.museum-info {
-    font-size: 15px;
-}
-
-/* --------------------------------(table)-------------------------------- */
-
-.table-container {
-    display: flex;
-    justify-content: center;
-}
-
-.table {
-    width: auto;
-    background: #353534;
-    border: 1px solid #ffd572;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-    padding: 30px;
-    margin: 50px;
-    border-radius: 20px;
-}
-
-.table-museum {
-    margin-left: 20px;
-    border-collapse: separate;
-    padding: 20px;
-    width: 95%;
-    height: 95%;
-    color: #e7c075;
-}
-
-.table-museum tbody tr:hover {
-    background-color: var(--table-hover--);
-    color: var(--table-text--);
-}
-
-.table-museum th {
-    color: #a4a2a8;
-    padding: 15px;
-    border-bottom: 2px solid #ffd572;
-    font-size: 23px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.table-museum {
-    border-collapse: separate;
-    border-spacing: 0 15px;
-    width: 100%;
-    background: transparent;
-}
-
-.table-museum tbody tr,
-.table-museum tfoot tr {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(184, 134, 11, 0.2);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border-radius: 15px;
-    cursor: pointer;
-    text-align: center;
-}
-
-.table-museum td {
-    padding: 25px 15px;
-    border: none !important;
-    margin: 20px 0px;
-}
-
-.table-museum tbody tr:hover {
-    transform: translateY(-5px) scale(1.01);
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(184, 134, 11, 0.8);
-    color: #fff !important;
-}
-
-.table-museum tbody #row1:hover {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)),
-        url("../assets/images/grand egy museum/photo_2026-04-25_16-12-06.jpg");
-}
-
-.table-museum tbody #row2:hover {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)),
-        url("../assets/images/egy museum/cairo-museum.jpg");
-}
-
-.table-museum tbody #row3:hover {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)),
-        url("../assets/images/islamic art/museum_of_islamic_art,cairo.jpg");
-}
-
-.table-museum tbody #row4:hover {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)),
-        url("../assets/images/coptic museum/The Coptic Museum (1).jpg");
-}
-
-.table-museum tbody #row5:hover {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)),
-        url("../assets/images/nmec/The National Museum of Egyptian Civilization, Egypt.jpg");
-}
-
-.table-museum tbody tr:hover td,
-.table-museum tfoot tr:hover td {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-/* ============================================================= */
-#footer-r.light:hover {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
-        url("../assets/images/footer-r.png");
-
-}
-
-.footer-d.light {
-    background: rgba(254, 232, 182, 0.2);
-    color: #5d3c24;
-
-}
-
-/* ============================================================================= */
-#footer-r:hover {
-    transform: translateY(-5px) scale(1.01);
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(184, 134, 11, 0.8);
-    color: white !important;
-    background-color: rgba(35, 35, 35, 0.356);
-    background-color: rgba(26, 26, 26, 0.356);
-}
-
-#footer-r:hover {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)),
-        url("../assets/images/footer-r-d.png");
-}
-
-.table-museum tfoot td {
-    background: rgba(0, 0, 0, 0.2);
-    color: #e7c075;
-}
-
-
-.table-museum tfoot tr:hover #all-m {
-    background: linear-gradient(to right, #ffffff, #fffdf0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
-}
-
-/* ======================================================================================= */
-.heading h1.light {
-    color: #5d3c24;
-}
-
-.heading p.light {
-    color: #a47231;
-}
-
-.heading span.light {
-    color: #a47231;
-}
-
-.card-container.light {
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgb(192 95 0 / 28%);
-}
-
-.cards_container span.light {
-    color: #a47231;
-}
-
-button.light {
-    background: linear-gradient(to right, #5d3c24 0%, #a47231 50%, #bb954f 100%);
-    text-shadow: 0px 0px 5px rgba(230, 194, 0, 0.4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border-color: #ffd572;
-}
-
-.table.light {
-    background: #ffffff;
-    border: 1px solid #ffd572;
-}
-
-.table-museum.light {
-    color: #a47231;
-}
-
-#poster1.light {
-    content: url("../assets/images/Coptic Museum Of Cairo.jfif");
-}
-
-#poster2.light {
-    content: url("../assets/images/Egyptian Museum.jpg");
-}
-
-#poster3.light {
-    content: url("../assets/images/grandlight.png");
-}
-
-#poster4.light {
-    content: url("../assets/images/islamic.jfif");
-}
-
-#poster5.light {
-    content: url("../assets/images/NMdownload (4).jpg");
-}
-
-.table-museum tbody #row1.light:hover {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
-        url("../assets/images/grand egy museum/photo_2026-04-25_16-12-06.jpg");
-}
-
-.table-museum tbody #row2.light:hover {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
-        url("../assets/images/egy museum/cairo-museum.jpg");
-}
-
-.table-museum tbody #row3.light:hover {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
-        url("../assets/images/islamic art/museum_of_islamic_art,cairo.jpg");
-}
-
-.table-museum tbody #row4.light:hover {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
-        url("../assets/images/coptic museum/The Coptic Museum (1).jpg");
-}
-
-.table-museum tbody #row5.light:hover {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
-        url("../assets/images/nmec/The National Museum of Egyptian Civilization, Egypt.jpg");
-}
-
-.table-museum tfoot tr:hover #all-m.light {
-    background: linear-gradient(to right, #5d3c24 0%, #a47231 50%, #bb954f 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
-}
-
-.table-museum th.light {
-    color: #5d3c24;
+    margin-top: 150px;
+
+    >div {
+        width: 80%;
+
+        span {
+            color: #ffe9b0;
+            font-family: 'Montserrat';
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display';
+            font-size: 40px;
+            font-weight: 600;
+            color: #E5E2E1;
+            margin-bottom: 40px;
+        }
+    }
+
+    table {
+        width: 70%;
+        border-collapse: separate;
+        border-spacing: 0;
+        border-radius: 12px;
+        border: 1px solid #ffe9b033;
+        overflow: hidden;
+        font-family: 'Montserrat';
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 50px;
+
+        thead {
+            background-color: #0E0E0E;
+            color: #ffe9b0;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #1C1B1B;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #181717;
+        }
+
+        td {
+            padding: 32px;
+            border-bottom: 1px solid #ffe9b033;
+        }
+
+        th {
+            padding: 12px;
+            border-bottom: 1px solid #ffe9b033;
+        }
+
+        th[rowspan='2'] {
+            padding: 24px;
+            border-bottom: 1px solid #ffe9b033;
+        }
+
+
+        tbody td:nth-child(1) {
+            font-family: 'Playfair Display';
+            font-size: 18px;
+            font-weight: 400;
+            color: #ffe9b0;
+        }
+
+        tbody td:nth-child(2), tbody td:nth-child(7), tbody td:nth-child(9) {
+            font-size: 16px;
+            font-weight: 400;
+            color: #d0c5afcc;
+        }
+
+        tbody td:nth-child(3),
+        tbody td:nth-child(4),
+        tbody td:nth-child(5),
+        tbody td:nth-child(6) {
+            color: #d0c5af;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        tfoot {
+            color: #d0c5afcc;
+            font-size: 15px;
+            letter-spacing: 1.5px;
+            background-color: #262525;
+
+            td {
+                border: none;
+            }
+
+            a {
+                border: 0.8px solid #ffe9b04d;
+                padding: 8px 24px;
+                border-radius: 50px;
+                color: #ffe9b0;
+                font-weight: 600;
+                font-size: 12px;
+                transition: 0.5s;
+            }
+
+            a:hover {
+                background-color: #ffe9b01a;
+            }
+        }
+
+        .state {
+            background-color: #ffb4ab0d;
+            border-color: #ffb4ab33;
+            color: #ffb4ab;
+            box-shadow: 0px 0px 15px 0px #ffb4ab1a;
+            border: 1px solid;
+            border-radius: 50px;
+            padding: 4px 16px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .open {
+            background-color: #10b9810d;
+            color: #34d399;
+            box-shadow: 0px 0px 15px 0px #34d3991a;
+            border-color: #10b98133;
+        }
+
+    }
 }
